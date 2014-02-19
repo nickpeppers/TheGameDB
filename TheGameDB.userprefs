@@ -1,0 +1,15 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="TheGameDB\AzureService.cs">
+    <Files>
+      <File FileName="TheGameDB\MainActivity.cs" Line="246" Column="20" />
+      <File FileName="TheGameDB\FBWebViewAuthActivity.cs" Line="27" Column="3" />
+      <File FileName="TheGameDB\AzureService.cs" Line="16" Column="34" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.TheGameDB MonoForAntroid.PreferredDevice="3.7in WVGA (Nexus One)" />
+</Properties>
