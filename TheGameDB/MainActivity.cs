@@ -109,7 +109,6 @@ namespace TheGameDB.Android
 			
 			if (isLoggedIn) 
 			{
-				
 				fb.GetTaskAsync ("fql", new { q = query }).ContinueWith (t => 
 				{
 					if (!t.IsFaulted) 
