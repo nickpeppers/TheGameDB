@@ -70,6 +70,7 @@
     <Compile Include="AzureService.cs" />
     <Compile Include="User.cs" />
     <Compile Include="GamesList.cs" />
+    <Compile Include="Game.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
