@@ -68,6 +68,7 @@
     <Compile Include="FBWebViewAuthActivity.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="AzureService.cs" />
+    <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
