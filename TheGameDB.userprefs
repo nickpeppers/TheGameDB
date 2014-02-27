@@ -1,13 +1,14 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="TheGameDB\Game.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="TheGameDB\FBWebViewAuthActivity.cs">
     <Files>
-      <File FileName="TheGameDB\MainActivity.cs" Line="114" Column="6" />
-      <File FileName="TheGameDB\FBWebViewAuthActivity.cs" Line="99" Column="34" />
+      <File FileName="TheGameDB\MainActivity.cs" Line="1" Column="1" />
+      <File FileName="TheGameDB\FBWebViewAuthActivity.cs" Line="22" Column="3" />
       <File FileName="TheGameDB\AzureService.cs" Line="16" Column="34" />
-      <File FileName="TheGameDB\User.cs" Line="2" Column="19" />
+      <File FileName="TheGameDB\User.cs" Line="1" Column="1" />
       <File FileName="TheGameDB\GamesList.cs" Line="11" Column="3" />
-      <File FileName="TheGameDB\Game.cs" Line="7" Column="16" />
+      <File FileName="TheGameDB\Game.cs" Line="19" Column="24" />
+      <File FileName="..\..\..\..\..\Program Files (x86)\MSBuild\Xamarin\Android\Xamarin.Android.Common.targets" Line="594" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
