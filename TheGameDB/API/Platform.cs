@@ -17,6 +17,7 @@ namespace TheGameDB
         public string Media { get; set; }
         public string MaxControllers { get; set; }
         public string Rating { get; set; }
+        //TODO: Need to do get images
     }
 }
 
