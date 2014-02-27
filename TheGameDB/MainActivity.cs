@@ -16,17 +16,11 @@ namespace TheGameDB.Android
 	[Activity (Label = "FacebookSample.Android", MainLauncher = true)]
 	public class Activity1 : Activity
 	{
-		// Replace here you own Facebook App Id, if you don't have one go to
 		// https://developers.facebook.com/apps
 		private const string AppId = "669004006475405";
 		
-		/// <summary>
-		/// Extended permissions is a comma separated list of permissions to ask the user.
-		/// </summary>
-		/// <remarks>
 		/// For extensive list of available extended permissions refer to 
 		/// https://developers.facebook.com/docs/reference/api/permissions/
-		/// </remarks>
 		private const string ExtendedPermissions = "user_about_me,read_stream,publish_stream";
 
 		FacebookClient fb;
