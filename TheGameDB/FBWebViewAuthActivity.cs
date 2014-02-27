@@ -110,7 +110,8 @@ namespace TheGameDB.Android
 				var fb = new FacebookClient(accessToken);
 				Intent backData = new Intent ();
 				
-				fb.GetTaskAsync ("me?fields=id").ContinueWith (t => {
+				fb.GetTaskAsync ("me?fields=id").ContinueWith (t => 
+                {
 					if(!t.IsFaulted)
 					{						
 						if (t.Exception != null)
@@ -149,7 +150,8 @@ namespace TheGameDB.Android
 				mParentActivity.Title = string.Format("Loading {0}%", newProgress);
 				mParentActivity.SetProgress(newProgress * 100);
 
-				if (newProgress == 100) {
+				if (newProgress == 100)
+                {
 					mParentActivity.Title = view.Url;
 				}
 			}
