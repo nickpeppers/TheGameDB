@@ -13,7 +13,7 @@ using TheGameDB;
 
 namespace TheGameDB.Android
 {
-	[Activity (Label = "FacebookSample.Android", MainLauncher = true)]
+    [Activity (Label = "TheGamesDB", MainLauncher = true)]
 	public class Activity1 : Activity
 	{
 		// https://developers.facebook.com/apps
@@ -54,19 +54,6 @@ namespace TheGameDB.Android
 			btnRemovePost.Click += HandleRemoveHiFromWall;
 			btnGraphSample.Click += HandleGraphApiSample;
 			btnFQLSample.Click += HandleFqlSample;
-
-			if (AppId == "669004006475405") 
-			{
-				string msg ="Please visit \n https://developers.facebook.com/ \n " +
-					"to get one or replace \"AppId\" Constant inside \"Activity1\" " +
-						"class if you already have it \n =D ";
-
-				AlertDialog.Builder builder = new AlertDialog.Builder(this);
-				builder.SetTitle("Get/Replace Facebook App ID");
-				//builder.SetIcon(Android.Resource.Drawable.Icon);
-				builder.SetMessage(msg);	
-				builder.Show();
-			}
 		}
 
 		void HandleGraphApiSample (object sender, EventArgs e)
