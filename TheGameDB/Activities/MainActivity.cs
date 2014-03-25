@@ -33,7 +33,7 @@ namespace TheGameDB.Android
 			base.OnCreate (bundle);
 
 			// Set our view from the "main" layout resource
-			SetContentView (Resource.Layout.Main);
+            SetContentView (Resource.Layout.MainLayout);
 
 			var btnLogin = FindViewById<Button> (Resource.Id.btnLogin);
 			var btnPostWall = FindViewById<Button> (Resource.Id.btnPostWall);

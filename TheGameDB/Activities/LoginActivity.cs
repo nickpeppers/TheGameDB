@@ -66,6 +66,7 @@ namespace TheGameDB
                                 var result = (IDictionary<string, object>)t.Result;
                                 string profileName = (string)result["name"];
                                 _loginViewModel.User = new User { UserID = userId, FacebookToken = _accessToken, Name = profileName};
+                                StartActivity(typeof(CreateAccountActivity));
                             }
                             else
                             {
