@@ -17,13 +17,13 @@ namespace TheGameDB
             IsBusy = true;
             try
             {
-                await AzureService.MobileService.GetTable<User>().InsertAsync(new User
-                {
-                    UserID = User.UserID,
-                    Name = User.Name,
-                    AccountIdentifier = User.AccountIdentifier,
-                    FacebookToken = User.FacebookToken,
-                });
+//                await AzureService.MobileService.GetTable<User>().InsertAsync(new User
+//                {
+//                    UserID = User.UserID,
+//                    Name = User.Name,
+//                    AccountIdentifier = User.AccountIdentifier,
+//                    FacebookToken = User.FacebookToken,
+//                });
                 settings.User = await service.Login(User, AccountIdentifier);
                 settings.LoggedIn = true;
                 settings.Save();
