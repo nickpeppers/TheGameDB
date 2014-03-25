@@ -12,12 +12,9 @@ using Microsoft.WindowsAzure.MobileServices;
 
 namespace TheGameDB
 {
-	public class AzureService
+    public static class AzureService
     {
         // voting service class to get information from Azure server need url and app key to properly find
         public static readonly MobileServiceClient MobileService = new MobileServiceClient("https://csintermediateproject.azure-mobile.net/", "zeBmdSnLPMjmgYyBgucUibIGUkwGER72");
-
-        // used mainly to set the current User for other activities to load
-        public User User { get; set; }
     }
 }

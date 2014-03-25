@@ -13,15 +13,15 @@ using Facebook;
 
 namespace TheGameDB
 {
-    [Activity(Label = "LoginActivity")]			
+    [Activity(Label = "Login", MainLauncher = true)]			
     public class LoginActivity : Activity
     {
         FacebookClient _fb;
-        AzureService _azureService;
+        private readonly LoginViewModel _loginViewModel = ServiceContainer.Resolve<LoginViewModel>();
+        private readonly ISettings _settings = ServiceContainer.Resolve<ISettings>();
         string _accessToken;
         private const string _appId = "669004006475405";
         private const string _extendedPermissions = "user_about_me,read_stream,publish_stream";
-        bool _isLoggedIn;
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -38,6 +38,11 @@ namespace TheGameDB
                 webAuth.PutExtra ("ExtendedPermissions", _extendedPermissions);
                 StartActivityForResult (webAuth, 0);
             };
+
+            if (_settings.LoggedIn)
+            {
+                //TODO: Start MainScreen Activity if already Logged in
+            }
         }
 
         protected override void OnActivityResult (int requestCode, Result resultCode, Intent data)
@@ -60,8 +65,7 @@ namespace TheGameDB
                             {
                                 var result = (IDictionary<string, object>)t.Result;
                                 string profileName = (string)result["name"];
-                                _isLoggedIn = true;
-                                _azureService.User = new User { UserID = userId, AccountIdentifier = _accessToken, Name = profileName};
+                                _loginViewModel.User = new User { UserID = userId, FacebookToken = _accessToken, Name = profileName};
                             }
                             else
                             {

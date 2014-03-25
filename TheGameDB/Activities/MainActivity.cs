@@ -13,7 +13,7 @@ using TheGameDB;
 
 namespace TheGameDB.Android
 {
-    [Activity (Label = "TheGamesDB", MainLauncher = true)]
+    [Activity (Label = "TheGamesDB")]
 	public class Activity1 : Activity
 	{
 		// https://developers.facebook.com/apps

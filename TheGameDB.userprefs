@@ -1,10 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="TheGameDB\LoginActivity.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="TheGameDB\API\AzureService.cs">
     <Files>
-      <File FileName="TheGameDB\MainActivity.cs" Line="24" Column="89" />
-      <File FileName="TheGameDB\FBWebViewAuthActivity.cs" Line="154" Column="17" />
-      <File FileName="TheGameDB\LoginActivity.cs" Line="19" Column="95" />
+      <File FileName="TheGameDB\MainActivity.cs" Line="203" Column="26" />
+      <File FileName="TheGameDB\FBWebViewAuthActivity.cs" Line="136" Column="3" />
+      <File FileName="TheGameDB\API\User.cs" Line="7" Column="22" />
+      <File FileName="TheGameDB\API\AzureService.cs" Line="16" Column="6" />
+      <File FileName="TheGameDB\LoginActivity.cs" Line="20" Column="35" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
