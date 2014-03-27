@@ -9,8 +9,8 @@ namespace GamesDBGroup
 	{
 		static void Main(string[] args)
 		{
-			XmlDocument doc = new XmlDocument();
-			doc.Load(@"C:\Users\kylej_000\Desktop\ProjectTurnIn\XMLTesting\testing.xml");
+			XmlDocument doc = new XmlDocument ();
+			doc.Load(@"C:\Users\kylej_000\Documents\GitHub\TheGameDB\XMLReaderFolder\testing_gameList.xml");//test location
 
 			XmlNodeList nodes = doc.DocumentElement.SelectNodes("/Data/Game");
 
