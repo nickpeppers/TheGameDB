@@ -7,10 +7,16 @@ namespace TheGameDB
     {
         public async Task<User> Login(User User)
         {
-            var me = User;
-            var users = AzureService.MobileService.GetTable<User>();
-            await users.InsertAsync(me);
-            return me;
+            var user = new User
+            {
+                UserID = User.UserID,
+                Name = User.Name,
+                AccountIdentifier = User.AccountIdentifier,
+                FacebookToken = User.FacebookToken
+            };
+
+            await AzureService.MobileService.GetTable<User>().InsertAsync(user);
+            return user;
         }
     }
 }

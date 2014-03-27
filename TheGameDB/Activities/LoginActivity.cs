@@ -10,10 +10,11 @@ using Android.Views;
 using Android.Widget;
 using TheGameDB;
 using Facebook;
+using Android.Content.PM;
 
 namespace TheGameDB
 {
-    [Activity(Label = "Login", MainLauncher = true)]			
+    [Activity(Label = "TheGamesDB", MainLauncher = true)]			
     public class LoginActivity : BaseActivity<LoginViewModel>
     {
         FacebookClient _fb;
@@ -60,6 +61,7 @@ namespace TheGameDB
                                 string profileName = (string)result["name"];
                                 viewModel.User = new User { UserID = userId, FacebookToken = _accessToken, Name = profileName};
                                 StartActivity(typeof(CreateAccountActivity));
+                                Finish();
                             }
                             else
                             {

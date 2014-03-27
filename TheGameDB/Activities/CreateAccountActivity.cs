@@ -11,7 +11,7 @@ using Android.Widget;
 
 namespace TheGameDB
 {
-    [Activity(Label = "CreateAccountActivity")]			
+    [Activity(Label = "TheGamesDB")]			
     public class CreateAccountActivity : BaseActivity<LoginViewModel>
     {
         protected override void OnCreate(Bundle bundle)
@@ -28,12 +28,13 @@ namespace TheGameDB
             {
                 if(string.IsNullOrEmpty(accountIdentifierEditText.Text))
                 {
-                    //TODO: Show text empty popup
+                    var emptyDialog = new AlertDialog.Builder(this).SetTitle("Oops!").SetMessage("You must enter your identifier.").SetPositiveButton("Okay", (sender1, e1) => {}).Create();
+                    emptyDialog.Show();
                 }
                 else
                 {
                     viewModel.User.AccountIdentifier = accountIdentifierEditText.Text;
-                    await viewModel.Login();
+                    await viewModel.Login(this);
                 }
             };
         }
