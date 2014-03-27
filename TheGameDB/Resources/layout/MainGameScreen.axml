@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <LinearLayout
+        android:orientation="vertical"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/linearLayout1"
+        android:background="@drawable/ac_bg">
+        <ListView
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/listView1" />
+        <TextView
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="58.2dp"
+            android:id="@+id/textView1"
+            android:layout_marginTop="148.9dp"
+            android:layout_marginLeft="36.9dp"
+            android:autoText="true"
+            android:gravity="center"
+            android:hint="Search Games"
+            android:background="#ab544848"
+            android:padding="15dp"
+            android:layout_marginRight="38.3dp" />
+        <Button
+            android:text="Search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button1"
+            android:layout_marginTop="17.0dp"
+            android:layout_marginLeft="70.9dp"
+            android:layout_marginRight="72.3dp" />
+    </LinearLayout>
+</LinearLayout>

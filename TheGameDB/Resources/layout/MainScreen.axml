@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="15dp"
+    android:background="@drawable/crysis_bg">
+    <LinearLayout
+        android:orientation="vertical"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="138.5dp"
+        android:id="@+id/linearLayout1">
+        <TextView
+            android:text="Welcome, &lt;user&gt;"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView3"
+            android:layout_marginBottom="1.4dp"
+            android:layout_marginTop="0.0dp"
+            android:layout_marginLeft="62.4dp"
+            android:textColor="#ff0a0a0a" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="100.9dp"
+        android:id="@+id/linearLayout2"
+        android:background="#aa796d6d"
+        android:padding="10dp"
+        android:fadingEdge="none">
+        <AutoCompleteTextView
+            android:layout_width="161.1dp"
+            android:layout_height="34.2dp"
+            android:id="@+id/SearchGames"
+            android:hint="Search Games"
+            android:layout_marginBottom="0.0dp"
+            android:layout_marginTop="46.8dp" />
+        <Button
+            android:text="Submit"
+            android:layout_width="match_parent"
+            android:layout_height="36.7dp"
+            android:id="@+id/button1"
+            android:layout_marginLeft="14.2dp"
+            android:layout_marginBottom="0.0dp"
+            android:layout_marginTop="41.1dp" />
+        <GridLayout
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="140.3dp"
+            android:id="@+id/gridLayout1" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/linearLayout3"
+        android:layout_marginTop="0.0dp"
+        android:layout_marginBottom="0.0dp">
+        <TextView
+            android:text="Games"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/textView1"
+            android:textColor="#ff000000" />
+        <TextView
+            android:text="Platforms"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/textView2"
+            android:layout_marginLeft="180.1dp"
+            android:textColor="#ff060606" />
+    </LinearLayout>
+    <GridLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/gridLayout2" />
+</LinearLayout>
