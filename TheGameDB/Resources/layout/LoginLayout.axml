@@ -5,7 +5,7 @@
     android:layout_height="fill_parent"
     android:gravity="center">
     <ImageView
-        android:src="@android:drawable/ic_menu_gallery"
+        android:src="@drawable/THGDBLogo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/GamesDBLoginImageView"

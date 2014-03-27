@@ -95,6 +95,7 @@
     <AndroidResource Include="Resources\layout\LoginLayout.axml" />
     <AndroidResource Include="Resources\layout\MainLayout.axml" />
     <AndroidResource Include="Resources\layout\CreateAccountLayout.axml" />
+    <AndroidResource Include="Resources\drawable\THGDBLogo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
