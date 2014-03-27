@@ -22,7 +22,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginRight="10dp"
         android:inputType="textCapCharacters"
-        android:background="#ff9c9c9c" />
+        android:padding="3dp" />
     <Button
         android:text="Add Account Identifier "
         android:layout_width="match_parent"

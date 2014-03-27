@@ -5,10 +5,12 @@ namespace TheGameDB
 {
     public class IWebService
     {
-        public async Task<User> Login(User user)
+        public async Task<User> Login(User User)
         {
-            await AzureService.MobileService.GetTable<User>().InsertAsync(user);
-            return user;
+            var me = User;
+            var users = AzureService.MobileService.GetTable<User>();
+            await users.InsertAsync(me);
+            return me;
         }
     }
 }

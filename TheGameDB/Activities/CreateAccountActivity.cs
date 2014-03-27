@@ -20,6 +20,8 @@ namespace TheGameDB
             SetContentView(Resource.Layout.CreateAccountLayout);
 
             var accountIdentifierEditText = FindViewById<EditText>(Resource.Id.CreateAccountIdentifierEditText);
+            //TODO: Remove Hard coded for testing purposes
+            accountIdentifierEditText.Text = "5089340CC0124FE4";
 
             var addAccountIdentifier = FindViewById<Button>(Resource.Id.CreateAccountAddButton);
             addAccountIdentifier.Click += async (sender, e) =>
