@@ -13,10 +13,10 @@ using Android.Graphics;
 
 using Facebook;
 
-namespace TheGameDB.Android
+namespace TheGameDB
 {
 	[Activity (Label = "FBWebViewAuthActivity")]			
-	public class FBWebViewAuthActivity : Activity
+    public class FBWebViewAuthActivity : BaseActivity<LoginViewModel>
 	{
 		FacebookClient fb;
 		string url;

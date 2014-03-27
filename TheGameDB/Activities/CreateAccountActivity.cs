@@ -12,12 +12,28 @@ using Android.Widget;
 namespace TheGameDB
 {
     [Activity(Label = "CreateAccountActivity")]			
-    public class CreateAccountActivity : Activity
+    public class CreateAccountActivity : BaseActivity<LoginViewModel>
     {
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.CreateAccountLayout);
+
+            var accountIdentifierEditText = FindViewById<EditText>(Resource.Id.CreateAccountIdentifierEditText);
+
+            var addAccountIdentifier = FindViewById<Button>(Resource.Id.CreateAccountAddButton);
+            addAccountIdentifier.Click += async (sender, e) =>
+            {
+                if(string.IsNullOrEmpty(accountIdentifierEditText.Text))
+                {
+                    //TODO: Show text empty popup
+                }
+                else
+                {
+                    viewModel.User.AccountIdentifier = accountIdentifierEditText.Text;
+                    await viewModel.Login();
+                }
+            };
         }
     }
 }

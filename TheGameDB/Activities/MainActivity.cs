@@ -5,16 +5,15 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
-
 using Facebook;
 using System.Collections.Generic;
 using Android.Graphics;
 using TheGameDB;
 
-namespace TheGameDB.Android
+namespace TheGameDB
 {
     [Activity (Label = "TheGamesDB")]
-	public class Activity1 : Activity
+    public class MainActivity :  BaseActivity<LoginViewModel>
 	{
 		// https://developers.facebook.com/apps
 		private const string AppId = "669004006475405";

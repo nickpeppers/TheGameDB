@@ -1,18 +1,24 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="TheGameDB\Core\LoginViewModel.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="TheGameDB\Application.cs">
     <Files>
-      <File FileName="TheGameDB\API\User.cs" Line="1" Column="1" />
-      <File FileName="TheGameDB\API\AzureService.cs" Line="1" Column="1" />
-      <File FileName="TheGameDB\Core\ISettings.cs" Line="1" Column="1" />
-      <File FileName="TheGameDB\Core\LoginViewModel.cs" Line="27" Column="78" />
-      <File FileName="TheGameDB\Activities\LoginActivity.cs" Line="1" Column="1" />
-      <File FileName="TheGameDB\Activities\MainActivity.cs" Line="1" Column="1" />
+      <File FileName="TheGameDB\Core\LoginViewModel.cs" Line="18" Column="19" />
+      <File FileName="TheGameDB\Activities\LoginActivity.cs" Line="17" Column="5" />
+      <File FileName="TheGameDB\Activities\CreateAccountActivity.cs" Line="34" Column="36" />
+      <File FileName="c:\Users\smari_000\Documents\GitHub\TheGameDB\TheGameDB\Core\ServiceContainer.cs" Line="27" Column="1" />
+      <File FileName="TheGameDB\Core\BaseViewModel.cs" Line="10" Column="9" />
+      <File FileName="TheGameDB\Activities\BaseActivity.cs" Line="1" Column="1" />
+      <File FileName="TheGameDB\Activities\MainActivity.cs" Line="17" Column="62" />
+      <File FileName="TheGameDB\Activities\FBWebViewAuthActivity.cs" Line="19" Column="70" />
+      <File FileName="TheGameDB\Application.cs" Line="14" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="c:\Users\smari_000\Documents\GitHub\TheGameDB\TheGameDB\Core\ServiceContainer.cs" line="8" column="9" />
+      <Breakpoint file="C:\Users\smari_000\Documents\GitHub\TheGameDB\TheGameDB\Activities\LoginActivity.cs" line="17" column="5" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.TheGameDB MonoForAntroid.PreferredDevice="3.7in WVGA (Nexus One)" />
+  <MonoDevelop.Ide.ItemProperties.TheGameDB MonoForAntroid.PreferredDevice="Nexus 5" AndroidDeviceId-Debug="004a52aacd0ed7e2" />
 </Properties>

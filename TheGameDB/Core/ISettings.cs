@@ -2,13 +2,13 @@ using System;
 
 namespace TheGameDB
 {
-    public interface ISettings
+    public class ISettings
     {
-        User User { get; set; }
+        public User User { get; set; }
 
-        bool LoggedIn { get; set; }
+        public bool LoggedIn { get; set; }
 
-        void Save();
+        public void Save() { }
     }
 }
 

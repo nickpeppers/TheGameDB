@@ -15,6 +15,6 @@ namespace TheGameDB
     public static class AzureService
     {
         // voting service class to get information from Azure server need url and app key to properly find
-        public static readonly MobileServiceClient MobileService = new MobileServiceClient("https://csintermediateproject.azure-mobile.net/", "zeBmdSnLPMjmgYyBgucUibIGUkwGER72");
+        public static readonly MobileServiceClient MobileService = new MobileServiceClient("https://thegamesdb.azure-mobile.net/", "tHXqYkEehIGzYpNanTnJsxUFjliWul57");
     }
 }

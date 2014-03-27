@@ -3,9 +3,13 @@ using System.Threading.Tasks;
 
 namespace TheGameDB
 {
-    public interface IWebService
+    public class IWebService
     {
-        Task<User> Login(User user, string AcountIdentifier);
+        public async Task<User> Login(User user)
+        {
+            await AzureService.MobileService.GetTable<User>().InsertAsync(user);
+            return user;
+        }
     }
 }
 

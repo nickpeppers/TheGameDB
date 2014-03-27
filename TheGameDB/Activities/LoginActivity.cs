@@ -8,17 +8,15 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using TheGameDB.Android;
+using TheGameDB;
 using Facebook;
 
 namespace TheGameDB
 {
     [Activity(Label = "Login", MainLauncher = true)]			
-    public class LoginActivity : Activity
+    public class LoginActivity : BaseActivity<LoginViewModel>
     {
         FacebookClient _fb;
-        private readonly LoginViewModel _loginViewModel = ServiceContainer.Resolve<LoginViewModel>();
-        private readonly ISettings _settings = ServiceContainer.Resolve<ISettings>();
         string _accessToken;
         private const string _appId = "669004006475405";
         private const string _extendedPermissions = "user_about_me,read_stream,publish_stream";
@@ -38,11 +36,6 @@ namespace TheGameDB
                 webAuth.PutExtra ("ExtendedPermissions", _extendedPermissions);
                 StartActivityForResult (webAuth, 0);
             };
-
-            if (_settings.LoggedIn)
-            {
-                //TODO: Start MainScreen Activity if already Logged in
-            }
         }
 
         protected override void OnActivityResult (int requestCode, Result resultCode, Intent data)
@@ -65,7 +58,7 @@ namespace TheGameDB
                             {
                                 var result = (IDictionary<string, object>)t.Result;
                                 string profileName = (string)result["name"];
-                                _loginViewModel.User = new User { UserID = userId, FacebookToken = _accessToken, Name = profileName};
+                                viewModel.User = new User { UserID = userId, FacebookToken = _accessToken, Name = profileName};
                                 StartActivity(typeof(CreateAccountActivity));
                             }
                             else

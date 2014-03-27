@@ -4,11 +4,30 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:minWidth="25px"
-    android:minHeight="25px">
+    android:minHeight="25px"
+    android:gravity="top">
+    <TextView
+        android:text="To complete the login process please visit http://thegamesdb.net/ and login to your account to obtain your account identifier. Your account identifier is located under My User Info and is required to login."
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/CreateAccountInfoTextView"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/AccountIdentifierEditText"
+        android:id="@+id/CreateAccountIdentifierEditText"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:inputType="textCapCharacters"
+        android:background="#ff9c9c9c" />
+    <Button
+        android:text="Add Account Identifier "
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/CreateAccountAddButton"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="10dp" />
