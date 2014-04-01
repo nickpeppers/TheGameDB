@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Data>
+  <baseImgUrl>http://thegamesdb.net/banners/</baseImgUrl>
+  <Images>
+    <fanart>
+        <original width="1920" height="1080">fanart/original/2-1.jpg</original>
+        <thumb>fanart/thumb/2-1.jpg</thumb>
+    </fanart>
+    <fanart>
+        <original width="1920" height="1080">fanart/original/2-2.jpg</original>
+        <thumb>fanart/thumb/2-2.jpg</thumb>
+    </fanart>
+    <fanart>
+        <original width="1920" height="1080">fanart/original/2-3.jpg</original>
+        <thumb>fanart/thumb/2-3.jpg</thumb>
+    </fanart>
+    <fanart>
+        <original width="1920" height="1080">fanart/original/2-4.jpg</original>
+        <thumb>fanart/thumb/2-4.jpg</thumb>
+    </fanart>
+    <fanart>
+        <original width="1920" height="1080">fanart/original/2-5.jpg</original>
+        <thumb>fanart/thumb/2-5.jpg</thumb>
+    </fanart>
+    <fanart>
+        <original width="1920" height="1080">fanart/original/2-6.jpg</original>
+        <thumb>fanart/thumb/2-6.jpg</thumb>
+    </fanart>
+    <boxart side="back" width="1525" height="2162" thumb="boxart/thumb/original/back/2-1.jpg">boxart/original/back/2-1.jpg</boxart>
+    <boxart side="front" width="1525" height="2160" thumb="boxart/thumb/original/front/2-1.jpg">boxart/original/front/2-1.jpg</boxart>
+    <banner width="760" height="140">graphical/2-g2.jpg</banner>
+    <banner width="760" height="140">graphical/2-g3.jpg</banner>
+    <screenshot>
+        <original width="1920" height="1080">screenshots/2-1.jpg</original>
+        <thumb>screenshots/thumb/2-1.jpg</thumb>
+    </screenshot>
+    <clearlogo width="400" height="95">clearlogo/2.png</clearlogo>
+  </Images>
+</Data>

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamesSolution", "GamesSolution\GamesSolution.csproj", "{6215818E-5BCE-4C74-A5AE-CFBED3CDC609}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameListSolution", "GamesSolution\GameListSolution.csproj", "{6215818E-5BCE-4C74-A5AE-CFBED3CDC609}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +13,9 @@ Global
 		{6215818E-5BCE-4C74-A5AE-CFBED3CDC609}.Debug|x86.Build.0 = Debug|x86
 		{6215818E-5BCE-4C74-A5AE-CFBED3CDC609}.Release|x86.ActiveCfg = Release|x86
 		{6215818E-5BCE-4C74-A5AE-CFBED3CDC609}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = GamesSolution\GamesSolution.csproj
