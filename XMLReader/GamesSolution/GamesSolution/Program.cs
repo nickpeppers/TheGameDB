@@ -10,7 +10,7 @@ namespace GamesDBGroup
 		static void Main(string[] args)
 		{
 			XmlDocument doc = new XmlDocument ();
-			doc.Load(@"C:\Users\kylej_000\Documents\GitHub\TheGameDB\XMLReader\test_games.xml");//test location
+			doc.Load(@"C:\Users\kylej_000\Documents\GitHub\TheGameDB\XMLReader\getGameList.xml");//test location
 
 			XmlNodeList nodes = doc.DocumentElement.SelectNodes("/Data/Game");
 
@@ -32,13 +32,17 @@ namespace GamesDBGroup
 				games.Add(game);
 			}
 
+            int x=games.Count;
+            for (int y = 0; y < x; y++)
+            {
+                Console.WriteLine("The ID is: " + games[y].id);
+                Console.WriteLine("The Title of the Game is: " + games[y].title);
+                Console.WriteLine("The Release Date of the Game is: " + games[y].releaseDate);
+                Console.WriteLine("The Platform of the Game is: " + games[y].platform);
 
-			Console.WriteLine("The ID is: " + games[0].id);
-			Console.WriteLine("The Title of the Game is: " + games[0].title);
-			Console.WriteLine("The Release Date of the Game is: " + games[0].releaseDate);
-			Console.WriteLine("The Platform of the Game is: " + games[0].platform);
-
-			Console.ReadLine();
+                
+            }
+            Console.ReadLine();
 		}
 	}
 

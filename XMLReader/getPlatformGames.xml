@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Data>
+    <Game>
+        <id>10</id>
+        <GameTitle>Ace Combat 6: Fires of Liberation</GameTitle>
+        <thumb>boxart/original/front/10-1.jpg</thumb>
+    </Game>
+    <Game>
+        <id>11</id>
+        <GameTitle>Army of Two</GameTitle>
+        <thumb>boxart/original/front/11-1.jpg</thumb></Game>
+    <Game>
+        <id>24</id>
+        <GameTitle>Gears of War 2</GameTitle>
+        <thumb>boxart/original/front/24-1.jpg</thumb>
+    </Game>
+    <Game>
+        <id>27</id>
+        <GameTitle>Golden Axe: Beast Rider</GameTitle>
+        <ReleaseDate>10/14/2008</ReleaseDate>
+        <thumb>boxart/original/front/27-1.jpg</thumb>
+    </Game>
+</Data>
