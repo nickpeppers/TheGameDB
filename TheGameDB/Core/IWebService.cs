@@ -9,7 +9,7 @@ namespace TheGameDB
         {
             var user = new User
             {
-                UserID = User.UserID,
+				UserId = User.UserId,
                 Name = User.Name,
                 AccountIdentifier = User.AccountIdentifier,
                 FacebookToken = User.FacebookToken
