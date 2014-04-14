@@ -51,8 +51,9 @@ namespace GamesDBGroup
 
 		public string id;
 		public string title;
+        public string releaseDate;
 		public string platform;
-		public string releaseDate;
+		
 
 		//place for fanart to list/*IMPORTANT*/
 	}

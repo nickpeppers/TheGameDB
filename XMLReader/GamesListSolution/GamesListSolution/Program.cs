@@ -10,7 +10,7 @@ namespace GamesDBGroup
 		static void Main(string[] args)
 		{
 			XmlDocument doc = new XmlDocument ();
-			doc.Load(@"C:\Users\kylej_000\Documents\GitHub\TheGameDB\XMLReaderFolder\testing_gameList.xml");//test location
+			doc.Load(@"C:\Users\kylej_000\Documents\GitHub\TheGameDB\XMLReader\getGame.xml");//test location
 
 			XmlNodeList nodes = doc.DocumentElement.SelectNodes("/Data/Game");
 
@@ -23,6 +23,11 @@ namespace GamesDBGroup
 
 				game.id = node.SelectSingleNode("id").InnerText;
 				game.title = node.SelectSingleNode("GameTitle").InnerText;
+                game.platform = node.SelectSingleNode("Platform").InnerText;
+                game.releaseDate = node.SelectSingleNode("ReleaseDate").InnerText;
+                game.overView= node.SelectSingleNode("Overview").InnerText;
+                game.esrb = node.SelectSingleNode("ESRB").InnerText;
+
 
 
 				games.Add(game);
@@ -31,6 +36,12 @@ namespace GamesDBGroup
 
 			Console.WriteLine("The ID is: " + games[0].id);
 			Console.WriteLine("The Title of the Game is: " + games[0].title);
+            Console.WriteLine("The Platform of the game is: " + games[0].platform);
+            Console.WriteLine("The Release Date of the game is: " + games[0].releaseDate);
+            Console.WriteLine("The OverView of the game is: " + games[0].overView);
+            Console.WriteLine("The ESRB Rating is: " + games[0].esrb);
+
+
 			Console.ReadLine();
 		}
 	}
