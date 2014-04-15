@@ -9,5 +9,6 @@ namespace TheGameDB
 		public string ReleaseDate { get; set; }
         public string Platform {get; set;}
 	}
+	/*This is where the creater method should go*/
 }
 

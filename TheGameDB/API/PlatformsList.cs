@@ -8,6 +8,10 @@ namespace TheGameDB
         public int PlatformId{ get; set; }
         public string PlatformName{ get; set; }
         public string PlatformAlias { get; set; }
+
+
+		/*This is where the creater method should go*/
+
     }
 }
 

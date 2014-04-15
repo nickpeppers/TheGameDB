@@ -18,5 +18,9 @@ namespace TheGameDB
 		public string Rating { get; set; }
 		//TODO: Fan Art Class 
 	}
+
+	/*This is where the creater method should go*/
+
+
 }
 
