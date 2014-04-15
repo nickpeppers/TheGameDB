@@ -35,6 +35,8 @@ namespace TheGameDB
                 {
                     viewModel.User.AccountIdentifier = accountIdentifierEditText.Text;
                     await viewModel.Login(this);
+                    StartActivity(typeof(MainActivity));
+                    Finish();
                 }
             };
         }
