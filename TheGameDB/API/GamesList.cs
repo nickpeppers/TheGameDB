@@ -8,7 +8,12 @@ namespace TheGameDB
 		public string GameTitle{ get; set; }
 		public string ReleaseDate { get; set; }
         public string Platform {get; set;}
+
+
+
+		/*This is where the creater method should go*/
+
 	}
-	/*This is where the creater method should go*/
+
 }
 
