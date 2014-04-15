@@ -39,13 +39,11 @@ namespace TheGameDB
 			webView.Settings.LoadWithOverviewMode = true; //Load 100% zoomed out
 			webView.ScrollBarStyle = ScrollbarStyles.OutsideOverlay;
 			webView.ScrollbarFadingEnabled = true;
-			
-			
+
 			webView.VerticalScrollBarEnabled = true;
 			webView.HorizontalScrollBarEnabled = true;
 			
 			webView.SetWebViewClient(new FBWebClient (this));
-			webView.SetWebChromeClient(new FBWebChromeClient (this));
 			
 			AddContentView(webView, new ViewGroup.LayoutParams(ViewGroup.LayoutParams.FillParent, ViewGroup.LayoutParams.FillParent));
 
@@ -89,7 +87,13 @@ namespace TheGameDB
 				{
 					return;
 				}
-				
+
+				// Hides dumb success url
+				if (url.Contains ("https://www.facebook.com/connect/login_success.html")) 
+				{
+					view.Visibility = ViewStates.Invisible;
+				}
+
 				if (oauthResult.IsSuccess)
 				{
 					// Facebook Granted Token
@@ -131,27 +135,6 @@ namespace TheGameDB
 						parentActivity.Finish();
 					}
 				});
-			}
-		}
-		
-		private class FBWebChromeClient : WebChromeClient
-		{
-			private Activity mParentActivity;
-			
-			public FBWebChromeClient (Activity parentActivity)
-			{
-				mParentActivity = parentActivity;
-			}
-			
-			public override void OnProgressChanged(WebView view, int newProgress)
-			{
-				mParentActivity.Title = string.Format("Loading {0}%", newProgress);
-				mParentActivity.SetProgress(newProgress * 100);
-
-				if (newProgress == 100)
-                {
-					mParentActivity.Title = view.Url;
-				}
 			}
 		}
 	}

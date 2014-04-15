@@ -12,7 +12,7 @@ using TheGameDB;
 
 namespace XamChat.Droid
 {
-    [Application(Theme = "@android:style/Theme.Holo")]
+	[Application(Theme = "@android:style/Theme.Holo.NoActionBar.Fullscreen")]
     public class Application : Android.App.Application
     {
         public Application(IntPtr javaReference, JniHandleOwnership transfer)
