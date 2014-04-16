@@ -13,10 +13,10 @@ namespace TheGameDB
 {
 	public class SearchAdapter : BaseAdapter<GamesList>
 	{
-		GamesList[] games; 
+		List<GamesList> games; 
 		Activity context; 
 
-		public SearchAdapter(Activity context, GamesList[] g) : base ()
+		public SearchAdapter(Activity context, List<GamesList> g) : base ()
 		{
 			this.context = context;
 			this.games = g;
@@ -34,7 +34,7 @@ namespace TheGameDB
 
 		public override int Count 
 		{
-			get { return games.Length; }
+			get { return games.Count; }
 		}
 
 		public override View GetView(int position, View convertView, ViewGroup parent)
