@@ -11,8 +11,50 @@ using Android.Widget;
 
 namespace TheGameDB
 {
-	class SearchAdapter
+	class SearchAdapter : BaseAdapter<GamesList>
 	{
+		GamesList[] games; 
+		Activity context; 
+
+		public SearchAdapter(Activity context, GamesList[] g) : base {
+			this.context = context;
+			this.games = g;
+		}
+
+		public override long GetItemId(int position)
+		{
+			return position;
+		}
+
+		public override GamesList this[int position] 
+		{  
+			get { return items[position]; }
+		}
+
+		public override int Count 
+		{
+			get { return items.Length; }
+		}
+
+		public override View GetView(int position, View convertView, ViewGroup parent){
+			View view = convertView;
+			if (view == null)
+				view = context.LayoutInflater.Inflate (Android.Resource.Layout.SimpleListItem1, null);
+			view.FindViewById<Button> (Android.Resource.Id.Text1).Text = games [position];
+			return view;
+		}
+
+		protected override void OnCreate(Bundle bundle)
+		{
+			base.OnCreate(bundle);
+			var ListAdapter = new SearchAdapter<GamesList>(this, Android.Resource.Layout.SimpleListItem1, games);
+		}
+
+		protected override void OnListItemClick (ListView l, View v, int position, long id)
+		{
+			var selection = games[position];
+
+		}
 	}
 }
 
