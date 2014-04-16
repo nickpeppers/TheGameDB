@@ -83,6 +83,7 @@
     <Compile Include="Activities\CreateAccountActivity.cs" />
     <Compile Include="Activities\BaseActivity.cs" />
     <Compile Include="Application.cs" />
+    <Compile Include="SearchAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
