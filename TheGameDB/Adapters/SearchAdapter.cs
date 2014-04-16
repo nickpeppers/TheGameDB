@@ -11,12 +11,13 @@ using Android.Widget;
 
 namespace TheGameDB
 {
-	class SearchAdapter : BaseAdapter<GamesList>
+	public class SearchAdapter : BaseAdapter<GamesList>
 	{
 		GamesList[] games; 
 		Activity context; 
 
-		public SearchAdapter(Activity context, GamesList[] g) : base {
+		public SearchAdapter(Activity context, GamesList[] g) : base ()
+		{
 			this.context = context;
 			this.games = g;
 		}
@@ -28,23 +29,22 @@ namespace TheGameDB
 
 		public override GamesList this[int position] 
 		{  
-			get { return items[position]; }
+			get { return games[position]; }
 		}
 
 		public override int Count 
 		{
-			get { return items.Length; }
+			get { return games.Length; }
 		}
 
-		public override View GetView(int position, View convertView, ViewGroup parent){
+		public override View GetView(int position, View convertView, ViewGroup parent)
+		{
 			View view = convertView;
 			if (view == null)
 				view = context.LayoutInflater.Inflate (Android.Resource.Layout.SimpleListItem1, null);
-			view.FindViewById<Button> (Android.Resource.Id.Text1).Text = games [position];
+			view.FindViewById<Button> (Android.Resource.Id.Text1).Text = games [position].GameTitle;
 			return view;
 		}
-
-	
 	}
 }
 

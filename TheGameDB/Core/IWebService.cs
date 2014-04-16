@@ -3,28 +3,34 @@ using System.Threading.Tasks;
 
 namespace TheGameDB
 {
-    public class IWebService
-    {
-        public async Task<bool> CheckExistingUser(User User)
-        {
-            bool userExists = false;
-            var users = await AzureService.MobileService.GetTable<User>().ToListAsync();
-            return userExists;
-        }
+	public class IWebService
+	{
+		public async Task<bool> CheckExistingUser(User User)
+		{
+			var userExists =  await AzureService.MobileService.GetTable<User>().Where (t => t.UserId == User.UserId).ToListAsync ();
+			if (userExists.Count > 0) 
+			{
+				return true;
+			} 
+			else
+			{
+				return false;
+			}
+		}
 
-        public async Task<User> Login(User User)
-        {
-            var user = new User
-            {
+		public async Task<User> Login(User User)
+		{
+			var user = new User
+			{
 				UserId = User.UserId,
-                Name = User.Name,
-                AccountIdentifier = User.AccountIdentifier,
-                FacebookToken = User.FacebookToken
-            };
+				Name = User.Name,
+				AccountIdentifier = User.AccountIdentifier,
+				FacebookToken = User.FacebookToken
+			};
 
-            await AzureService.MobileService.GetTable<User>().InsertAsync(user);
-            return user;
-        }
-    }
+			await AzureService.MobileService.GetTable<User>().InsertAsync(user);
+			return user;
+		}
+	}
 }
 

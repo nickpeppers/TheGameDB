@@ -83,10 +83,7 @@
     <Compile Include="Activities\CreateAccountActivity.cs" />
     <Compile Include="Activities\BaseActivity.cs" />
     <Compile Include="Application.cs" />
-    <Compile Include="Activities\GameScreen.cs">
-      <DependentUpon>CreateAccountActivity.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Activities\SearchAdapter.cs" />
+    <Compile Include="Adapters\SearchAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -118,5 +115,6 @@
     <Folder Include="API\" />
     <Folder Include="Core\" />
     <Folder Include="Activities\" />
+    <Folder Include="Adapters\" />
   </ItemGroup>
 </Project>

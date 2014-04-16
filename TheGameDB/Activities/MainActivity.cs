@@ -13,22 +13,29 @@ using Android;
 
 namespace TheGameDB
 {
-    [Activity (Label = "TheGamesDB")]
-    public class MainActivity :  BaseActivity<LoginViewModel>
+	[Activity (Label = "TheGamesDB")]
+	public class MainActivity :  BaseActivity<LoginViewModel>
 	{
 
 		protected override void OnCreate (Bundle bundle)
-        {
-            base.OnCreate(bundle);
+		{
+			base.OnCreate(bundle);
 
-            SetContentView(Resource.Layout.MainLayout);
+			SetContentView(Resource.Layout.MainLayout);
 
-            var searchButton = FindViewById<Button>(Resource.Id.MainSearchButton);
-            searchButton.Click += (sender, e) =>
-            {
+			var searchButton = FindViewById<Button>(Resource.Id.MainSearchButton);
+			searchButton.Click += (sender, e) =>
+			{
 
-            };
-        }
+			};
+			GamesList[] games = new GamesList[1];
+			var ListAdapter = new SearchAdapter(this, games);
+		}
+
+		protected void OnListItemClick (ListView l, View v, int position, long id)
+		{
+			//var selection = games[position];
+		}
 	}
 }
 
