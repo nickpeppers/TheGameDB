@@ -44,17 +44,7 @@ namespace TheGameDB
 			return view;
 		}
 
-		protected override void OnCreate(Bundle bundle)
-		{
-			base.OnCreate(bundle);
-			var ListAdapter = new SearchAdapter<GamesList>(this, Android.Resource.Layout.SimpleListItem1, games);
-		}
-
-		protected override void OnListItemClick (ListView l, View v, int position, long id)
-		{
-			var selection = games[position];
-
-		}
+	
 	}
 }
 
