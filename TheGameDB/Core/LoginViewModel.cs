@@ -43,7 +43,7 @@ namespace TheGameDB
             try
             {
                 settings.User = await service.Login(User);
-                settings.LoggedIn = true;
+				settings.IsLoggedIn = true;
                 settings.Save();
             }
             catch(Exception exc)
