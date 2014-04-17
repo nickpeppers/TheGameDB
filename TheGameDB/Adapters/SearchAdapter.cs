@@ -40,9 +40,13 @@ namespace TheGameDB
 		public override View GetView(int position, View convertView, ViewGroup parent)
 		{
 			View view = convertView;
-			if (view == null)
-				view = context.LayoutInflater.Inflate (Resource.Layout.RowItemLayout, null);
-			view.FindViewById<Button> (Android.Resource.Id.Text1).Text = games [position].GameTitle;
+            if (view == null)
+            {
+                view = context.LayoutInflater.Inflate(Resource.Layout.MainSearchRowLayout, null);
+            }
+            view.FindViewById<TextView> (Resource.Id.MainSearchRowTitleTextView).Text = games [position].GameTitle;
+            view.FindViewById<TextView> (Resource.Id.MainSearchRowReleaseTextView).Text = games [position].ReleaseDate;
+            view.FindViewById<TextView> (Resource.Id.MainSearchRowPlatformTextView).Text = games [position].Platform;
 			return view;
 		}
 	}

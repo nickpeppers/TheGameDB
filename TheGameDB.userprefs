@@ -2,17 +2,15 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
   <MonoDevelop.Ide.Workbench ActiveDocument="TheGameDB\Activities\MainActivity.cs">
     <Files>
-      <File FileName="TheGameDB\Core\LoginViewModel.cs" Line="1" Column="1" />
-      <File FileName="TheGameDB\Activities\LoginActivity.cs" Line="28" Column="4" />
-      <File FileName="TheGameDB\Activities\CreateAccountActivity.cs" Line="1" Column="1" />
-      <File FileName="TheGameDB\Activities\BaseActivity.cs" Line="1" Column="1" />
       <File FileName="TheGameDB\Activities\MainActivity.cs" Line="1" Column="1" />
       <File FileName="TheGameDB\Adapters\SearchAdapter.cs" Line="1" Column="1" />
-      <File FileName="TheGameDB\Resources\Resource.designer.cs" Line="1" Column="1" />
+      <File FileName="TheGameDB\Activities\FBWebViewAuthActivity.cs" Line="1" Column="1" />
+      <File FileName="TheGameDB\API\GamesList.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.TheGameDB MonoForAntroid.PreferredDevice="3.7&quot; WVGA (Nexus One)" />
 </Properties>
