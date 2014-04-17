@@ -30,7 +30,7 @@ namespace TheGameDB
 			{
 				List<GamesList> games = new List<GamesList>();
 				//Example list item for testing
-				var gameItem1 = new GamesList {GameId = 1, GameTitle = "Halo", ReleaseDate = "11/04/91", Platform = "Xbox"};
+				var gameItem1 = new GamesList {GameId = "1", GameTitle = "Halo", ReleaseDate = "11/04/91", Platform = "Xbox"};
 				games.Add(gameItem1);
 
 				var listView = FindViewById<ListView>(Resource.Id.MainSearchListView);
