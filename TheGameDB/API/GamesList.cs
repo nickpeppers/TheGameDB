@@ -11,15 +11,13 @@ namespace TheGameDB
 		public string ReleaseDate { get; set; }
         public string Platform {get; set;}
 
-
-
 		/*This is where the creater method should go*/
-		public List<GamesList> GetGameList(){
+        public List<GamesList> GetGameList(string SearchText)
+        {
 			XmlDocument doc = new XmlDocument ();
-			doc.Load(" http://thegamesdb.net/api/GetGamesList.php?name=halo");//test location
+            doc.Load("http://thegamesdb.net/api/GetGamesList.php?name=" + SearchText);//test location
 
 			XmlNodeList nodes = doc.DocumentElement.SelectNodes("/Data/Game");
-
 
 			List<GamesList> games = new List<GamesList>();
 
@@ -34,7 +32,6 @@ namespace TheGameDB
 				}
 				game.Platform=node.SelectSingleNode("Platform").InnerText;
 
-
 				games.Add(game);
 			}
 
@@ -45,8 +42,6 @@ namespace TheGameDB
 					Console.WriteLine("The Title of the Game is: " + games[y].title);
 					Console.WriteLine("The Release Date of the Game is: " + games[y].releaseDate);
 					Console.WriteLine("The Platform of the Game is: " + games[y].platform);
-
-
 				}*/
 			//Console.ReadLine();
 			return games;

@@ -28,10 +28,8 @@ namespace TheGameDB
 			var searchButton = FindViewById<Button>(Resource.Id.MainSearchButton);
 			searchButton.Click += (sender, e) =>
 			{
-				List<GamesList> games = new List<GamesList>();
-				//Example list item for testing
-				var gameItem1 = new GamesList {GameId = "1", GameTitle = "Halo", ReleaseDate = "11/04/91", Platform = "Xbox"};
-				games.Add(gameItem1);
+                var gameList = new GamesList();
+                var games = gameList.GetGameList(searchEditText.Text);
 
 				var listView = FindViewById<ListView>(Resource.Id.MainSearchListView);
 				listView.Adapter = new SearchAdapter(this, games);
