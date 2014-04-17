@@ -29,7 +29,7 @@ namespace XamChat.Droid
             ServiceContainer.Register<LoginViewModel>(() => new LoginViewModel());
 
             //Models
-            ServiceContainer.Register<ISettings>(() => new ISettings());
+			ServiceContainer.Register<ISettings>(() => new ISettings(this));
             ServiceContainer.Register<IWebService>(() => new IWebService());
         }
     }

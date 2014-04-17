@@ -9,6 +9,31 @@ namespace TheGameDB
     {
         public User User { get; set; }
 
+        public async Task CheckExistingUser(Context context)
+        {
+            try
+            {
+                bool userExists = await service.CheckExistingUser(User);
+                if(userExists)
+                {
+
+                }
+                settings.Save();
+            }
+            catch(Exception exc)
+            {
+                var errorDialog = new AlertDialog.Builder(context).SetTitle("Oops!").SetMessage("Something went wrong " + exc.ToString()).SetPositiveButton("Okay", (sender1, e1) =>
+                {
+
+                }).Create();
+                errorDialog.Show();
+            }
+            finally
+            {
+                IsBusy = false;
+            }
+        }
+
         public async Task Login(Context context)
         {
             if (string.IsNullOrEmpty(User.AccountIdentifier))
@@ -18,7 +43,7 @@ namespace TheGameDB
             try
             {
                 settings.User = await service.Login(User);
-                settings.LoggedIn = true;
+				settings.IsLoggedIn = true;
                 settings.Save();
             }
             catch(Exception exc)
