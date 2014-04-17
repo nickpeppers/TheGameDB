@@ -1,19 +1,15 @@
 ﻿<Properties>
-<<<<<<< HEAD
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-=======
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
->>>>>>> 8599b0e8ebe65086d9741e5fda9beddb78a1ecfd
   <MonoDevelop.Ide.Workbench ActiveDocument="TheGameDB\Activities\MainActivity.cs">
     <Files>
-      <File FileName="TheGameDB\Core\IWebService.cs" Line="17" Column="18" />
-      <File FileName="TheGameDB\Activities\MainActivity.cs" Line="43" Column="1" />
-      <File FileName="TheGameDB\Activities\CreateAccountActivity.cs" Line="1" Column="1" />
+      <File FileName="TheGameDB\Adapters\SearchAdapter.cs" Line="46" Column="14" />
+      <File FileName="TheGameDB\API\GamesList.cs" Line="18" Column="23" />
+      <File FileName="TheGameDB\Activities\MainActivity.cs" Line="32" Column="29" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.TheGameDB MonoForAntroid.PreferredDevice="Nexus 5" AndroidDeviceId-Debug="015d456d8527fa10" />
+  <MonoDevelop.Ide.ItemProperties.TheGameDB MonoForAntroid.PreferredDevice="Nexus 7" AndroidDeviceId-Debug="004a52aacd0ed7e2" />
 </Properties>

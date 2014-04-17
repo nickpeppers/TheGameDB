@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" package="TheGamesDB.TheGamesDB" android:versionName="0.1.1">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" package="TheGamesDB.TheGamesDB" android:versionName="0.1.2">
 	<uses-sdk android:minSdkVersion="10" android:targetSdkVersion="14" />
 	<application android:label="TheGamesDB" android:icon="@drawable/icon" android:hardwareAccelerated="true" android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen"></application>
 	<uses-permission android:name="android.permission.INTERNET" />
