@@ -1,9 +1,6 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="GamesSolution\Program.cs">
-    <Files>
-      <File FileName="GamesSolution\Program.cs" Line="25" Column="20" />
-    </Files>
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="MonoDevelop.Debugger.WatchPad">
         <State>
