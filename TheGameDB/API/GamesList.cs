@@ -27,23 +27,14 @@ namespace TheGameDB
 
 				game.GameId = node.SelectSingleNode("id").InnerText;
 				game.GameTitle = node.SelectSingleNode("GameTitle").InnerText;
-				if (node.SelectSingleNode ("ReleaseDate") != null) {
+				if (node.SelectSingleNode ("ReleaseDate") != null) 
+                {
 					game.ReleaseDate = node.SelectSingleNode ("ReleaseDate").InnerText;
 				}
 				game.Platform=node.SelectSingleNode("Platform").InnerText;
 
 				games.Add(game);
 			}
-
-			int x=games.Count;
-			/*for (int y = 0; y < x; y++)
-				{
-					Console.WriteLine("The ID is: " + games[y].id);
-					Console.WriteLine("The Title of the Game is: " + games[y].title);
-					Console.WriteLine("The Release Date of the Game is: " + games[y].releaseDate);
-					Console.WriteLine("The Platform of the Game is: " + games[y].platform);
-				}*/
-			//Console.ReadLine();
 			return games;
 		}
 

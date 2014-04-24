@@ -1,10 +1,17 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="TheGameDB\Activities\MainActivity.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="TheGameDB\Core\LoginViewModel.cs">
     <Files>
-      <File FileName="TheGameDB\Adapters\SearchAdapter.cs" Line="46" Column="14" />
-      <File FileName="TheGameDB\API\GamesList.cs" Line="18" Column="23" />
-      <File FileName="TheGameDB\Activities\MainActivity.cs" Line="32" Column="29" />
+      <File FileName="TheGameDB\Core\IWebService.cs" Line="1" Column="1" />
+      <File FileName="TheGameDB\Adapters\SearchAdapter.cs" Line="1" Column="1" />
+      <File FileName="TheGameDB\API\GamesList.cs" Line="1" Column="1" />
+      <File FileName="TheGameDB\Core\ISettings.cs" Line="1" Column="1" />
+      <File FileName="TheGameDB\Activities\FBWebViewAuthActivity.cs" Line="1" Column="1" />
+      <File FileName="TheGameDB\Activities\CreateAccountActivity.cs" Line="1" Column="1" />
+      <File FileName="TheGameDB\Core\LoginViewModel.cs" Line="37" Column="33" />
+      <File FileName="TheGameDB\API\Game.cs" Line="1" Column="1" />
+      <File FileName="TheGameDB\Activities\BaseActivity.cs" Line="1" Column="1" />
+      <File FileName="TheGameDB\Activities\MainActivity.cs" Line="37" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
