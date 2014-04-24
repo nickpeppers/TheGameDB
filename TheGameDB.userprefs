@@ -1,6 +1,6 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="TheGameDB\Core\LoginViewModel.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="TheGameDB\Core\IWebService.cs">
     <Files>
       <File FileName="TheGameDB\Core\IWebService.cs" Line="1" Column="1" />
       <File FileName="TheGameDB\Adapters\SearchAdapter.cs" Line="1" Column="1" />
@@ -11,7 +11,7 @@
       <File FileName="TheGameDB\Core\LoginViewModel.cs" Line="37" Column="33" />
       <File FileName="TheGameDB\API\Game.cs" Line="1" Column="1" />
       <File FileName="TheGameDB\Activities\BaseActivity.cs" Line="1" Column="1" />
-      <File FileName="TheGameDB\Activities\MainActivity.cs" Line="37" Column="4" />
+      <File FileName="TheGameDB\Activities\MainActivity.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
