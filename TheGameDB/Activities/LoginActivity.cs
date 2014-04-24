@@ -29,6 +29,7 @@ namespace TheGameDB
             SetContentView(Resource.Layout.LoginLayout);
 
             var loginButton = FindViewById<Button>(Resource.Id.LoginButton);
+            loginButton.Enabled = false;
 
             loginButton.Click += (sender, e) => 
             {
@@ -37,9 +38,20 @@ namespace TheGameDB
                 webAuth.PutExtra ("ExtendedPermissions", _extendedPermissions);
                 StartActivityForResult (webAuth, 0);
             };
+
+            if (viewModel.settings.User != null)
+            {
+                viewModel.User = viewModel.settings.User;
+                StartActivity(typeof(MainActivity));
+                Finish();
+            }
+            else
+            {
+                loginButton.Enabled = true;
+            }
         }
 
-        protected override void OnActivityResult (int requestCode, Result resultCode, Intent data)
+        protected override async void OnActivityResult (int requestCode, Result resultCode, Intent data)
         {
             base.OnActivityResult (requestCode, resultCode, data);
 
@@ -53,15 +65,13 @@ namespace TheGameDB
 
                         _fb = new FacebookClient(_accessToken);
 
-                        _fb.GetTaskAsync("me").ContinueWith(t =>
+                        await _fb.GetTaskAsync("me").ContinueWith(t =>
                         {
                             if (!t.IsFaulted)
                             {
                                 var result = (IDictionary<string, object>)t.Result;
                                 string profileName = (string)result["name"];
-								viewModel.User = new User { UserId = userId, FacebookToken = _accessToken, Name = profileName};
-                                StartActivity(typeof(CreateAccountActivity));
-                                Finish();
+                                viewModel.User = new User { UserId = userId, FacebookToken = _accessToken, Name = profileName};
                             }
                             else
                             {
@@ -70,6 +80,29 @@ namespace TheGameDB
                                 });
                             }
                         });
+                       
+                        try
+                        {
+                            await viewModel.CheckExistingUser(this);
+                            if(viewModel.UserExists)
+                            {
+                                StartActivity(typeof(MainActivity));
+                            }
+                            else
+                            {
+                                StartActivity(typeof(CreateAccountActivity));
+                            }
+                        }
+                        catch(Exception exc)
+                        {
+                            Alert("Failed to check if user exists", "Reason: " + exc, false, (res) =>
+                            {
+                            });
+                        }
+                        finally
+                        {
+                            Finish();
+                        }
                     }
                     break;
                 case Result.Canceled:

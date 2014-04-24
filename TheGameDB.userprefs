@@ -1,20 +1,25 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="TheGameDB\API\GamesList.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="TheGameDB\Core\IWebService.cs">
     <Files>
+<<<<<<< HEAD
       <File FileName="TheGameDB\Adapters\SearchAdapter.cs" Line="1" Column="1" />
       <File FileName="TheGameDB\API\GamesList.cs" Line="18" Column="23" />
       <File FileName="TheGameDB\Activities\MainActivity.cs" Line="1" Column="1" />
       <File FileName="TheGameDB\Core\ServiceContainer.cs" Line="1" Column="1" />
       <File FileName="TheGameDB\Core\LoginViewModel.cs" Line="1" Column="1" />
+=======
+>>>>>>> 64b627530471b5ba4e86c5dd99d01b251f0a1ae7
       <File FileName="TheGameDB\Core\IWebService.cs" Line="1" Column="1" />
+      <File FileName="TheGameDB\Adapters\SearchAdapter.cs" Line="1" Column="1" />
+      <File FileName="TheGameDB\API\GamesList.cs" Line="1" Column="1" />
       <File FileName="TheGameDB\Core\ISettings.cs" Line="1" Column="1" />
-      <File FileName="TheGameDB\Core\BaseViewModel.cs" Line="1" Column="1" />
-      <File FileName="TheGameDB\Activities\LoginActivity.cs" Line="1" Column="1" />
-      <File FileName="TheGameDB\Activities\BaseActivity.cs" Line="1" Column="1" />
       <File FileName="TheGameDB\Activities\FBWebViewAuthActivity.cs" Line="1" Column="1" />
       <File FileName="TheGameDB\Activities\CreateAccountActivity.cs" Line="1" Column="1" />
-      <File FileName="..\..\..\Desktop\ProgressReport3\CodeFolder\XMLReader\GamesListSolution\GamesListSolution\Program.cs" Line="1" Column="1" />
+      <File FileName="TheGameDB\Core\LoginViewModel.cs" Line="37" Column="33" />
+      <File FileName="TheGameDB\API\Game.cs" Line="1" Column="1" />
+      <File FileName="TheGameDB\Activities\BaseActivity.cs" Line="1" Column="1" />
+      <File FileName="TheGameDB\Activities\MainActivity.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="MonoDevelop.Debugger.WatchPad">

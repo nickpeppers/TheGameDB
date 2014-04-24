@@ -9,6 +9,8 @@ namespace TheGameDB
     {
         public User User { get; set; }
 
+        public bool UserExists { get; set; }
+
         public async Task CheckExistingUser(Context context)
         {
             try
@@ -16,9 +18,22 @@ namespace TheGameDB
                 bool userExists = await service.CheckExistingUser(User);
                 if(userExists)
                 {
+                    var user = await AzureService.MobileService.GetTable<User>().Where(u => u.UserId == User.UserId).ToListAsync();
+                    if(user.Count > 1)
+                    {
+                        var errorDialog = new AlertDialog.Builder(context).SetTitle("Oops!").SetMessage("Duplicate user in DataBase.").SetPositiveButton("Okay", (sender1, e1) =>
+                        {
 
+                        }).Create();
+                        errorDialog.Show();
+                        UserExists = userExists;
+                    }
+                    User = user[0];
+                    settings.User = User;
+                    settings.IsLoggedIn = true;
+                    settings.Save();
                 }
-                settings.Save();
+                UserExists = userExists;
             }
             catch(Exception exc)
             {
@@ -27,6 +42,7 @@ namespace TheGameDB
 
                 }).Create();
                 errorDialog.Show();
+                UserExists = false;
             }
             finally
             {
