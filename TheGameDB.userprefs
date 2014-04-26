@@ -1,37 +1,15 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="TheGameDB\Core\IWebService.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="TheGameDB\Activities\MainActivity.cs">
     <Files>
-<<<<<<< HEAD
-      <File FileName="TheGameDB\Adapters\SearchAdapter.cs" Line="1" Column="1" />
-      <File FileName="TheGameDB\API\GamesList.cs" Line="18" Column="23" />
-      <File FileName="TheGameDB\Activities\MainActivity.cs" Line="1" Column="1" />
-      <File FileName="TheGameDB\Core\ServiceContainer.cs" Line="1" Column="1" />
-      <File FileName="TheGameDB\Core\LoginViewModel.cs" Line="1" Column="1" />
-=======
->>>>>>> 64b627530471b5ba4e86c5dd99d01b251f0a1ae7
-      <File FileName="TheGameDB\Core\IWebService.cs" Line="1" Column="1" />
-      <File FileName="TheGameDB\Adapters\SearchAdapter.cs" Line="1" Column="1" />
-      <File FileName="TheGameDB\API\GamesList.cs" Line="1" Column="1" />
-      <File FileName="TheGameDB\Core\ISettings.cs" Line="1" Column="1" />
-      <File FileName="TheGameDB\Activities\FBWebViewAuthActivity.cs" Line="1" Column="1" />
-      <File FileName="TheGameDB\Activities\CreateAccountActivity.cs" Line="1" Column="1" />
-      <File FileName="TheGameDB\Core\LoginViewModel.cs" Line="37" Column="33" />
-      <File FileName="TheGameDB\API\Game.cs" Line="1" Column="1" />
-      <File FileName="TheGameDB\Activities\BaseActivity.cs" Line="1" Column="1" />
-      <File FileName="TheGameDB\Activities\MainActivity.cs" Line="1" Column="1" />
+      <File FileName="TheGameDB\API\PlatformsList.cs" Line="16" Column="78" />
+      <File FileName="TheGameDB\API\GamesList.cs" Line="25" Column="5" />
+      <File FileName="TheGameDB\Activities\MainActivity.cs" Line="81" Column="22" />
     </Files>
-    <Pads>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State>
-          <Value>placeHolder.baseArray</Value>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.TheGameDB MonoForAntroid.PreferredDevice="Nexus 7" AndroidDeviceId-Debug="0123456789ABCDEF" />
+  <MonoDevelop.Ide.ItemProperties.TheGameDB AndroidDeviceId-Debug="004a52aacd0ed7e2" />
 </Properties>
