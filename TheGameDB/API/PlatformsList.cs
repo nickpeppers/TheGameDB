@@ -4,44 +4,39 @@ using System.Collections.Generic;
 
 namespace TheGameDB
 {
-
-
 	public class PlatformsList
-		{
+	{
 		public string PlatformId{ get; set; }
 		public string PlatformName{ get; set; }
 		public string PlatformAlias { get; set; }
 
-			/*This is where the creater method should go*/
-			public List<GamesList> GetGameList()
-			{
-				XmlDocument doc = new XmlDocument ();
+        public List<PlatformsList> GetPlatformsList()
+		{
+		    XmlDocument doc = new XmlDocument ();
 			doc.Load("http://thegamesdb.net/api/GetPlatformsList.php");//test location
 
-			XmlNodeList nodes = doc.DocumentElement.SelectNodes("/Data/Platforms");
+            XmlNodeList nodes = doc.DocumentElement.SelectNodes("/Data/Platforms/Platform");
 
 			List<PlatformsList> platforms = new List<PlatformsList>();
 
-				foreach (XmlNode node in nodes)
+			foreach (XmlNode node in nodes)
+			{
+                PlatformsList platform = new PlatformsList();
+
+    			platform.PlatformId = node.SelectSingleNode("id").InnerText;
+    			platform.PlatformName = node.SelectSingleNode("name").InnerText;
+    			if (node.SelectSingleNode ("alias") != null) 
 				{
-				PlatformsList platform = new List<Platforms>();
-
-				platform.PlatformId = node.SelectSingleNode("id").InnerText;
-				platform.PlatformName = node.SelectSingleNode("name").InnerText;
-				if (node.SelectSingleNode ("alias") != null) 
-					{
-					platform.PlatformAlias = node.SelectSingleNode ("alias").InnerText;
-					}
-
-
-				platforms.Add(platform);
+				    platform.PlatformAlias = node.SelectSingleNode ("alias").InnerText;
 				}
-			return platforms;
-			}
+    			platforms.Add(platform);
+    		}
+    		return platforms;
+        }
 
-		}
-
+        public override string ToString()
+        {
+            return PlatformName;
+        }
 	}
-  
 }
-
