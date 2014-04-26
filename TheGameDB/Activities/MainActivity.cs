@@ -37,6 +37,7 @@ namespace TheGameDB
             {
                 _gamesButton.Enabled = false;
                 _platformsButton.Enabled = true;
+                _searchButton.PerformClick();
             };
 
             _platformsButton.Click += (sender, e) => 
@@ -52,14 +53,14 @@ namespace TheGameDB
            
             _searchButton.Click += (sender, e) =>
             {
-                if(!_gamesButton.Enabled)
-                {
-                    var gameList = new GamesList();
-                    var games = gameList.GetGameList(searchEditText.Text);
+                _gamesButton.Enabled = false;
+                _platformsButton.Enabled = true;
 
-                    var listView = FindViewById<ListView>(Resource.Id.MainSearchListView);
-                    listView.Adapter = new SearchAdapter(this, games);
-                }
+                var gameList = new GamesList();
+                var games = gameList.GetGameList(searchEditText.Text);
+
+                var listView = FindViewById<ListView>(Resource.Id.MainSearchListView);
+                listView.Adapter = new SearchAdapter(this, games);
             };
 
             _gamesButton.Enabled = false;
