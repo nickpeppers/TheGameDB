@@ -70,7 +70,10 @@ namespace TheGameDB
         {
             base.OnConfigurationChanged(newConfig);
 
-            _searchButton.PerformClick();
+            if (!_searchButton.Enabled)
+                _searchButton.PerformClick();
+            else
+                _platformsButton.PerformClick();
         }
 
 		protected void OnListItemClick (ListView l, View v, int position, long id)
