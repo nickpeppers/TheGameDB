@@ -5,7 +5,7 @@ namespace TheGameDB
 {
     public class Platform
     {
-        public int PlatformId { get; set; }
+		public string PlatformId { get; set; }
         public string PlatformTitle { get; set; }
         public string Overview { get; set; }
         public string Developer { get; set; }
@@ -20,14 +20,14 @@ namespace TheGameDB
         public string Rating { get; set; }
         //TODO: Need to do get images
 
-        public Game GetPlatform(string PlatformId)
+		public Platform GetPlatform(string PlatformId)
         {
             XmlDocument doc = new XmlDocument ();
             doc.Load("http://thegamesdb.net/api/GetPlatform.php?id=" + PlatformId);
 
             XmlNodeList nodes = doc.DocumentElement.SelectNodes("/Data/Game");
 
-            Platform platform = new Game();
+			Platform platform = new Platform();
 
             foreach (XmlNode node in nodes)
             {

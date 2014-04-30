@@ -6,7 +6,7 @@ namespace TheGameDB
 	public class Game
 	{
         public string baseImgUrl { get; set; }
-        public int GameId { get; set; }
+		public string GameId { get; set; }
         public string GameTitle { get; set; }
         public string PlatformId { get; set; }
 		public string Platform { get; set; }
