@@ -20,6 +20,9 @@ namespace TheGameDB
         private Button _searchButton;
         private Button _gamesButton;
         private Button _platformsButton;
+		private ListView _listView;
+		private List<GamesList> _gamesList;
+		private List<PlatformsList> _platformList = new PlatformsList().GetPlatformsList();
 
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -33,6 +36,8 @@ namespace TheGameDB
             _gamesButton = FindViewById<Button>(Resource.Id.MainGamesSearchbarButton);
             _platformsButton = FindViewById<Button>(Resource.Id.MainPlatformsSearchBarButton);
 
+			_listView = FindViewById<ListView>(Resource.Id.MainSearchListView);
+
             _gamesButton.Click += (sender, e) => 
             {
                 _gamesButton.Enabled = false;
@@ -45,10 +50,7 @@ namespace TheGameDB
                 _platformsButton.Enabled = false;
                 _gamesButton.Enabled = true;
 
-                var platformList = new PlatformsList().GetPlatformsList();
-
-                var listView = FindViewById<ListView>(Resource.Id.MainSearchListView);
-                listView.Adapter = new ArrayAdapter<PlatformsList>(this, Android.Resource.Layout.SimpleListItem1, platformList);
+				_listView.Adapter = new ArrayAdapter<PlatformsList>(this, Android.Resource.Layout.SimpleListItem1, _platformList);
             };
            
             _searchButton.Click += (sender, e) =>
@@ -56,38 +58,44 @@ namespace TheGameDB
                 _gamesButton.Enabled = false;
                 _platformsButton.Enabled = true;
 
-                var gameList = new GamesList();
-                var games = gameList.GetGameList(searchEditText.Text);
+				_gamesList = new GamesList().GetGameList(searchEditText.Text);
 
-                var listView = FindViewById<ListView>(Resource.Id.MainSearchListView);
-                listView.Adapter = new SearchAdapter(this, games);
+				_listView.Adapter = new SearchAdapter(this, _gamesList);
             };
+
+			_listView.ItemClick += (sender, e) => 
+			{
+				if(!_gamesButton.Enabled)
+				{
+					var gameIntent = new Intent(this, typeof(GameActivity));
+					gameIntent.PutExtra("GameId", _gamesList[e.Position].GameId);
+					StartActivity(gameIntent);
+				}
+				else
+				{
+					var platformIntent = new Intent(this, typeof(PlatformActivity));
+					platformIntent.PutExtra("PlatformId", _platformList[e.Position].PlatformId);
+					StartActivity(platformIntent);
+				}
+			};
 
             _gamesButton.Enabled = false;
 		}
 
+		// For loading list on rotation
         public override void OnConfigurationChanged(Android.Content.Res.Configuration newConfig)
         {
             base.OnConfigurationChanged(newConfig);
 
-            if (!_searchButton.Enabled)
-                _searchButton.PerformClick();
-            else
-                _platformsButton.PerformClick();
+			if (!_searchButton.Enabled) 
+			{
+				_searchButton.PerformClick ();
+			}
+			else if(!_platformsButton.Enabled)
+			{
+				_platformsButton.PerformClick ();
+			}
         }
-
-		protected void OnListItemClick (ListView l, View v, int position, long id)
-		{
-            if (!_gamesButton.Enabled)
-            {
-                //TODO: go to game information screen
-            }
-            else if(!_platformsButton.Enabled)
-            {
-                //TODO: go to platform information screen
-            }
-			//var selection = games[position];
-		}
 	}
 }
 

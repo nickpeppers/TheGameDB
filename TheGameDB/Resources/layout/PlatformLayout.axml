@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="top"
+        android:orientation="vertical">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:minWidth="25px"
+            android:minHeight="25px">
+            <TextView
+                android:text="Microsoft Xbox 360"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/PlatformTitleText"
+                android:paddingBottom="3dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="3dp" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linearLayout1"
+                android:padding="5dp">
+                <ImageView
+                    android:src="@android:drawable/ic_menu_gallery"
+                    android:id="@+id/PlatformImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minHeight="300dp"
+                    android:minWidth="350dp" />
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:minWidth="25px"
+                    android:minHeight="25px"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/linearLayout2"
+                    android:layout_weight="1">
+                    <TextView
+                        android:text="Rating: 7/10"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/PlatformRatingText"
+                        android:padding="3dp" />
+                    <TextView
+                        android:text="The Xbox 360 is the second video game console produced by Microsoft and the successor to the Xbox. The Xbox 360 competes with Sony's PlayStation 3 and Nintendo's Wii as part of the seventh generation of video game consoles. As of September 30, 2011, 57.6 million Xbox 360 consoles have been sold worldwide."
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/PlatformOverviewText"
+                        android:padding="3dp" />
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+                android:text="Developer: Microsoft"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/PlatformDeveloperText"
+                android:padding="3dp" />
+            <TextView
+                android:text="Manufacturer: Microsoft"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/PlatformManufacturerText"
+                android:padding="3dp" />
+            <TextView
+                android:text="CPU: 3.2 GHz PowerPC Tri-Core Xenon"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/PlatformCPUText"
+                android:padding="3dp" />
+            <TextView
+                android:text="Memory  512 MB of GDDR3 RAM clocked at 700 MHz"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/PlatformMemoryText"
+                android:padding="3dp" />
+            <TextView
+                android:text="Graphics  500 MHz ATI Xenos"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/PlatformGraphicsText"
+                android:padding="3dp" />
+            <TextView
+                android:text="Sound  Dolby Digital 5.1 (TOSLINK and HDMI)"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/PlatformSoundText"
+                android:padding="3dp" />
+            <TextView
+                android:text="Display  1920x1080"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/PlatformDisplayText"
+                android:padding="3dp" />
+            <TextView
+                android:text="Media  Disc"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/PlatformMediaText"
+                android:padding="3dp" />
+            <TextView
+                android:text="Max. Controllers  4"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/PlatformMaxControllersText"
+                android:padding="3dp" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

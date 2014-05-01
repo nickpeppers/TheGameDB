@@ -21,6 +21,7 @@ namespace TheGameDB
         string _accessToken;
         private const string _appId = "669004006475405";
         private const string _extendedPermissions = "user_about_me,read_stream,publish_stream";
+		private Button _loginButton;
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -28,10 +29,10 @@ namespace TheGameDB
 
             SetContentView(Resource.Layout.LoginLayout);
 
-            var loginButton = FindViewById<Button>(Resource.Id.LoginButton);
-            loginButton.Enabled = false;
+			_loginButton = FindViewById<Button>(Resource.Id.LoginButton);
+			_loginButton.Enabled = false;
 
-            loginButton.Click += (sender, e) => 
+			_loginButton.Click += (sender, e) => 
             {
                 var webAuth = new Intent (this, typeof (FBWebViewAuthActivity));
                 webAuth.PutExtra ("AppId", _appId);
@@ -47,13 +48,15 @@ namespace TheGameDB
             }
             else
             {
-                loginButton.Enabled = true;
+				_loginButton.Enabled = true;
             }
         }
 
         protected override async void OnActivityResult (int requestCode, Result resultCode, Intent data)
         {
             base.OnActivityResult (requestCode, resultCode, data);
+
+			_loginButton.Enabled = false;
 
             switch (resultCode) 
             {
@@ -98,6 +101,7 @@ namespace TheGameDB
                             Alert("Failed to check if user exists", "Reason: " + exc, false, (res) =>
                             {
                             });
+							_loginButton.Enabled = true;
                         }
                         finally
                         {
