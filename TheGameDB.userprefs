@@ -1,28 +1,13 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workbench ActiveDocument="TheGameDB\API\Game.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="TheGameDB\Activities\GameActivity.cs">
     <Files>
-      <File FileName="TheGameDB\API\PlatformsList.cs" Line="16" Column="78" />
-      <File FileName="TheGameDB\API\GamesList.cs" Line="25" Column="5" />
-      <File FileName="TheGameDB\Activities\MainActivity.cs" Line="81" Column="22" />
-      <File FileName="TheGameDB\API\Platform.cs" Line="1" Column="1" />
-      <File FileName="TheGameDB\API\Game.cs" Line="32" Column="4" />
-=======
-  <MonoDevelop.Ide.Workbench>
-    <Files>
-      <File FileName="TheGameDB\API\PlatformsList.cs" Line="16" Column="78" />
-      <File FileName="TheGameDB\API\GamesList.cs" Line="25" Column="5" />
-      <File FileName="TheGameDB\Activities\MainActivity.cs" Line="85" Column="34" />
-      <File FileName="TheGameDB\Activities\GameActivity.cs" Line="21" Column="4" />
-      <File FileName="TheGameDB\Activities\LoginActivity.cs" Line="104" Column="8" />
-      <File FileName="TheGameDB\Activities\PlatformActivity.cs" Line="20" Column="4" />
->>>>>>> 61bf85f304b2aed083f4d3dc761d9cd8b051305d
+      <File FileName="TheGameDB\Activities\GameActivity.cs" Line="23" Column="55" />
+      <File FileName="TheGameDB\Activities\MainActivity.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.TheGameDB AndroidDeviceId-Debug="004a52aacd0ed7e2" MonoForAntroid.PreferredDevice="3.7&quot; WVGA (Nexus One)" />
 </Properties>
