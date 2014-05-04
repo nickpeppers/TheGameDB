@@ -50,6 +50,29 @@ namespace TheGameDB
             }
         }
 
+		public async Task UpdateAccountIdentifier(Context context)
+		{
+			IsBusy = true;
+			try
+			{
+				User = await service.UpdateAccountIdentifier(User);
+				settings.User = User;
+				settings.Save();
+			}
+			catch(Exception exc)
+			{
+				var errorDialog = new AlertDialog.Builder(context).SetTitle("Oops!").SetMessage("Something went wrong " + exc.ToString()).SetPositiveButton("Okay", (sender1, e1) =>
+				{
+
+				}).Create();
+				errorDialog.Show();
+			}
+			finally
+			{
+				IsBusy = false;
+			}
+		}
+
         public async Task Login(Context context)
         {
             if (string.IsNullOrEmpty(User.AccountIdentifier))

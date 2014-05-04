@@ -86,6 +86,7 @@
     <Compile Include="Adapters\SearchAdapter.cs" />
     <Compile Include="Activities\GameActivity.cs" />
     <Compile Include="Activities\PlatformActivity.cs" />
+    <Compile Include="Activities\ProfileActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -102,6 +103,7 @@
     <AndroidResource Include="Resources\layout\MainSearchRowLayout.axml" />
     <AndroidResource Include="Resources\layout\GameLayout.axml" />
     <AndroidResource Include="Resources\layout\PlatformLayout.axml" />
+    <AndroidResource Include="Resources\layout\ProfileLayout.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

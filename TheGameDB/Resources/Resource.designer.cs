@@ -73,47 +73,47 @@ namespace TheGameDB
 			// aapt resource value: 0x7f050000
 			public const int CreateAccountInfoTextView = 2131034112;
 			
-			// aapt resource value: 0x7f05000c
-			public const int GameCoopText = 2131034124;
-			
-			// aapt resource value: 0x7f05000f
-			public const int GameDeveloperText = 2131034127;
-			
-			// aapt resource value: 0x7f05000d
-			public const int GameGenresText = 2131034125;
-			
-			// aapt resource value: 0x7f050005
-			public const int GameImage = 2131034117;
-			
-			// aapt resource value: 0x7f050009
-			public const int GameOverviewText = 2131034121;
-			
-			// aapt resource value: 0x7f050007
-			public const int GamePlatformText = 2131034119;
-			
-			// aapt resource value: 0x7f05000b
-			public const int GamePlayersText = 2131034123;
-			
-			// aapt resource value: 0x7f050010
-			public const int GamePublisherText = 2131034128;
-			
-			// aapt resource value: 0x7f050008
-			public const int GameRatingText = 2131034120;
-			
 			// aapt resource value: 0x7f05000e
-			public const int GameReleaseDateText = 2131034126;
-			
-			// aapt resource value: 0x7f050003
-			public const int GameTitleText = 2131034115;
+			public const int GameCoopText = 2131034126;
 			
 			// aapt resource value: 0x7f050011
-			public const int GamesDBLoginImageView = 2131034129;
+			public const int GameDeveloperText = 2131034129;
+			
+			// aapt resource value: 0x7f05000f
+			public const int GameGenresText = 2131034127;
+			
+			// aapt resource value: 0x7f050007
+			public const int GameImage = 2131034119;
+			
+			// aapt resource value: 0x7f05000b
+			public const int GameOverviewText = 2131034123;
+			
+			// aapt resource value: 0x7f050009
+			public const int GamePlatformText = 2131034121;
+			
+			// aapt resource value: 0x7f05000d
+			public const int GamePlayersText = 2131034125;
 			
 			// aapt resource value: 0x7f050012
-			public const int LoginButton = 2131034130;
+			public const int GamePublisherText = 2131034130;
+			
+			// aapt resource value: 0x7f05000a
+			public const int GameRatingText = 2131034122;
+			
+			// aapt resource value: 0x7f050010
+			public const int GameReleaseDateText = 2131034128;
+			
+			// aapt resource value: 0x7f050005
+			public const int GameTitleText = 2131034117;
+			
+			// aapt resource value: 0x7f050013
+			public const int GamesDBLoginImageView = 2131034131;
 			
 			// aapt resource value: 0x7f050014
-			public const int MainGamesSearchbarButton = 2131034132;
+			public const int LoginButton = 2131034132;
+			
+			// aapt resource value: 0x7f050004
+			public const int MainGamesSearchbarButton = 2131034116;
 			
 			// aapt resource value: 0x7f050015
 			public const int MainPlatformsSearchBarButton = 2131034133;
@@ -184,17 +184,23 @@ namespace TheGameDB
 			// aapt resource value: 0x7f05001f
 			public const int PlatformTitleText = 2131034143;
 			
-			// aapt resource value: 0x7f050013
-			public const int StatusBarLinearLayout = 2131034131;
+			// aapt resource value: 0x7f05002c
+			public const int ProfileAccountIdentifierEditText = 2131034156;
 			
-			// aapt resource value: 0x7f050004
-			public const int linearLayout1 = 2131034116;
+			// aapt resource value: 0x7f05002d
+			public const int ProfileChangeIdentifierButton = 2131034157;
+			
+			// aapt resource value: 0x7f050003
+			public const int StatusBarLinearLayout = 2131034115;
 			
 			// aapt resource value: 0x7f050006
-			public const int linearLayout2 = 2131034118;
+			public const int linearLayout1 = 2131034118;
 			
-			// aapt resource value: 0x7f05000a
-			public const int linearLayout3 = 2131034122;
+			// aapt resource value: 0x7f050008
+			public const int linearLayout2 = 2131034120;
+			
+			// aapt resource value: 0x7f05000c
+			public const int linearLayout3 = 2131034124;
 			
 			static Id()
 			{
@@ -226,6 +232,9 @@ namespace TheGameDB
 			
 			// aapt resource value: 0x7f030005
 			public const int PlatformLayout = 2130903045;
+			
+			// aapt resource value: 0x7f030006
+			public const int ProfileLayout = 2130903046;
 			
 			static Layout()
 			{

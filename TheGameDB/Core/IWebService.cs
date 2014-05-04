@@ -18,6 +18,13 @@ namespace TheGameDB
 			}
 		}
 
+		public async Task<User> UpdateAccountIdentifier(User User)
+		{
+			await AzureService.MobileService.GetTable<User>().UpdateAsync(User);
+
+			return User;
+		}
+
 		public async Task<User> Login(User User)
 		{
 			var user = new User

@@ -32,11 +32,17 @@ namespace TheGameDB
 
 			var searchEditText = FindViewById<EditText> (Resource.Id.MainSearchEditText);
 
+			var profileButton = FindViewById<Button>(Resource.Id.MainProfileSearchBarButton);
             _searchButton = FindViewById<Button>(Resource.Id.MainSearchButton);
             _gamesButton = FindViewById<Button>(Resource.Id.MainGamesSearchbarButton);
             _platformsButton = FindViewById<Button>(Resource.Id.MainPlatformsSearchBarButton);
 
 			_listView = FindViewById<ListView>(Resource.Id.MainSearchListView);
+
+			profileButton.Click += (sender, e) => 
+			{
+				StartActivity(typeof(ProfileActivity));
+			};
 
             _gamesButton.Click += (sender, e) => 
             {

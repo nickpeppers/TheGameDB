@@ -1,13 +1,15 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="TheGameDB\Activities\GameActivity.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="TheGameDB\Activities\ProfileActivity.cs">
     <Files>
       <File FileName="TheGameDB\Activities\GameActivity.cs" Line="23" Column="55" />
       <File FileName="TheGameDB\Activities\MainActivity.cs" Line="1" Column="1" />
+      <File FileName="TheGameDB\Activities\ProfileActivity.cs" Line="23" Column="6" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.TheGameDB MonoForAntroid.PreferredDevice="3.7&quot; WVGA (Nexus One)" />
 </Properties>
