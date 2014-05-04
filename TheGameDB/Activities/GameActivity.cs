@@ -8,13 +8,15 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using System.Net.Http;
+using Android.Graphics.Drawables;
 
 namespace TheGameDB
 {
 	[Activity (Label = "GameActivity")]			
 	public class GameActivity : BaseActivity<LoginViewModel>
 	{
-		protected override void OnCreate (Bundle bundle)
+		protected override async void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
 
@@ -23,6 +25,7 @@ namespace TheGameDB
             var gameId = Intent.GetStringExtra("GameId");
             var game = new Game().GetGame(gameId);
 
+			var image = FindViewById<ImageView> (Resource.Id.GameImage);
             var gameTitle = FindViewById<TextView>(Resource.Id.GameTitleText);
             var platform = FindViewById<TextView>(Resource.Id.GamePlatformText);
             var releaseDate = FindViewById<TextView>(Resource.Id.GameReleaseDateText);
@@ -42,6 +45,23 @@ namespace TheGameDB
             publisher.Text = "Publisher: " + game.Publisher;
             developer.Text = "Developer: " + game.Developer;
             rating.Text = "Rating: " + game.Rating;
+
+            if (!string.IsNullOrEmpty (game.Image)) 
+            {
+                try
+                {
+                    var client = new HttpClient();
+                    var url = new Uri(game.Image);
+                    var stream = await client.GetStreamAsync(url);
+                    image.SetMinimumWidth(300);
+                    image.SetMinimumHeight(400);
+                    image.SetImageDrawable(await Drawable.CreateFromStreamAsync(stream, "src"));
+                }
+                catch
+                {
+
+                }
+            }
 
             //TODO: Forgot to add place for ESRB rating
 		}

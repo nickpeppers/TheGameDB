@@ -8,13 +8,15 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Android.Graphics.Drawables;
+using System.Net.Http;
 
 namespace TheGameDB
 {
 	[Activity (Label = "PlatformActivity")]			
 	public class PlatformActivity : BaseActivity<LoginViewModel>
 	{
-		protected override void OnCreate (Bundle bundle)
+        protected override async void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
 
@@ -23,6 +25,7 @@ namespace TheGameDB
             var platformId = Intent.GetStringExtra("PlatformId");
             var platform = new Platform().GetPlatform(platformId);
 
+            var image = FindViewById<ImageView>(Resource.Id.PlatformImage);
             var title = FindViewById<TextView>(Resource.Id.PlatformTitleText);
             var overview = FindViewById<TextView>(Resource.Id.PlatformOverviewText);
             var developer = FindViewById<TextView>(Resource.Id.PlatformDeveloperText);
@@ -48,6 +51,23 @@ namespace TheGameDB
             media.Text = "Media: " + platform.Media;
             maxControllers.Text = "Max Controllers: " + platform.MaxControllers;
             rating.Text = "Rating: " + platform.Rating;
+
+            if (!string.IsNullOrEmpty (platform.Image)) 
+            {
+                try
+                {
+                    var client = new HttpClient();
+                    var url = new Uri(platform.Image);
+                    var stream = await client.GetStreamAsync(url);
+                    image.SetMinimumWidth(300);
+                    image.SetMinimumHeight(400);
+                    image.SetImageDrawable(await Drawable.CreateFromStreamAsync(stream, "src"));
+                }
+                catch
+                {
+
+                }
+            }
 		}
 	}
 }

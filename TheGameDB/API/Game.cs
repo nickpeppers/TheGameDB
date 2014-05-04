@@ -5,7 +5,8 @@ namespace TheGameDB
 {
 	public class Game
 	{
-        public string baseImgUrl { get; set; }
+		private const string baseImgUrl = "http://thegamesdb.net/banners/";
+		public string Image { get; set;}
 		public string GameId { get; set; }
         public string GameTitle { get; set; }
         public string PlatformId { get; set; }
@@ -141,6 +142,37 @@ namespace TheGameDB
                     game.Rating = string.Empty;
                 }
             }
+
+			nodes = doc.DocumentElement.SelectNodes("/Data/Game/Images/boxart");
+
+			if(nodes != null)
+			{
+				if (nodes.Count == 2)
+				{
+					if (nodes[1].FirstChild != null)
+					{
+						if (nodes[1].FirstChild.Value.Contains("front"))
+						{
+							game.Image = baseImgUrl + nodes[1].FirstChild.Value;
+						}
+					}
+				}
+				else if (nodes.Count == 1)
+				{
+					if (nodes[0].FirstChild != null)
+					{
+						if (nodes[0].FirstChild.Value.Contains("front"))
+						{
+							game.Image = baseImgUrl + nodes[0].FirstChild.Value;
+						}
+					}
+				}
+				else
+				{
+					game.Image = string.Empty;
+				}
+			}
+
             return game;
         }
 	}

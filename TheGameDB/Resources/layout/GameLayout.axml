@@ -33,8 +33,15 @@
                     android:layout_weight="1"
                     android:background="#aa000000" />
             </LinearLayout>
+            <ImageView
+                android:id="@+id/GameImage"
+                android:scaleType="fitStart"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="0dp"
+                android:padding="3dp"
+                android:minWidth="0dp" />
             <TextView
-                android:text="Halo 3"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -43,53 +50,24 @@
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
                 android:paddingTop="3dp" />
-            <LinearLayout
-                android:orientation="horizontal"
-                android:minWidth="25px"
-                android:minHeight="25px"
+            <TextView
+                android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/linearLayout1"
-                android:padding="5dp">
-                <ImageView
-                    android:src="@android:drawable/ic_menu_gallery"
-                    android:id="@+id/GameImage"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:minHeight="300dp"
-                    android:minWidth="350dp" />
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:minWidth="25px"
-                    android:minHeight="25px"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/linearLayout2"
-                    android:layout_weight="1">
-                    <TextView
-                        android:text="Microsoft Xbox 360"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/GamePlatformText"
-                        android:padding="3dp" />
-                    <TextView
-                        android:text="Rating: 7/10"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/GameRatingText"
-                        android:padding="3dp" />
-                    <TextView
-                        android:text="Master Chief returns to a Covenant Dominated Earth on a mission to kill the final alien leader. Meanwhile, the Arbiter, Johnson, and Keyes form a loose alliance and escape from Delta Halo. The Covenant is ripped in civil war, and the Elites along with a handful of other alien races become sympathetic to the human cause. Delta Halo's impromptu dis-activation has brought all of the Halos to a &quot;remote activation phase&quot;. They can be activated from a facility called the ark, which happens to be on Earth."
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/GameOverviewText"
-                        android:padding="3dp" />
-                </LinearLayout>
-            </LinearLayout>
+                android:id="@+id/GamePlatformText"
+                android:padding="3dp" />
+            <TextView
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/GameRatingText"
+                android:padding="3dp" />
+            <TextView
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/GameOverviewText"
+                android:padding="3dp" />
             <LinearLayout
                 android:orientation="horizontal"
                 android:minWidth="25px"
@@ -98,7 +76,6 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/linearLayout3">
                 <TextView
-                    android:text="Players: 2"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
@@ -106,7 +83,6 @@
                     android:padding="3dp"
                     android:layout_weight="1" />
                 <TextView
-                    android:text="Co-Op: Yes"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
@@ -115,28 +91,24 @@
                     android:layout_weight="1" />
             </LinearLayout>
             <TextView
-                android:text="Genres: Shooter"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/GameGenresText"
                 android:padding="3dp" />
             <TextView
-                android:text="Release Date: 09/25/2007"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/GameReleaseDateText"
                 android:padding="3dp" />
             <TextView
-                android:text="Developer: Bungie"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/GameDeveloperText"
                 android:padding="3dp" />
             <TextView
-                android:text="Publisher: Microsoft Game Studios"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

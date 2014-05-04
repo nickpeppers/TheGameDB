@@ -5,6 +5,8 @@ namespace TheGameDB
 {
     public class Platform
     {
+        private const string baseImgUrl = "http://thegamesdb.net/banners/";
+        public string Image { get; set;}
 		public string PlatformId { get; set; }
         public string PlatformTitle { get; set; }
         public string Overview { get; set; }
@@ -137,6 +139,26 @@ namespace TheGameDB
                 else
                 {
                     platform.Rating = string.Empty;
+                }
+            }
+
+            nodes = doc.DocumentElement.SelectNodes("/Data/Platform/Images/boxart");
+
+            if(nodes != null)
+            {
+                if (nodes.Count > 0)
+                {
+                    if (nodes[0].FirstChild != null)
+                    {
+                        if (nodes[0].FirstChild.Value.Contains("platform/boxart"))
+                        {
+                            platform.Image = baseImgUrl + nodes[0].FirstChild.Value;
+                        }
+                    }
+                }
+                else
+                {
+                    platform.Image = string.Empty;
                 }
             }
             return platform;
