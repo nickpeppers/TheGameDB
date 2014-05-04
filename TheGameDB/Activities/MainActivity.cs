@@ -84,6 +84,18 @@ namespace TheGameDB
 					StartActivity(platformIntent);
 				}
 			};
+				
+			searchEditText.KeyPress += (object sender, View.KeyEventArgs e) => 
+			{
+				if(e.Event.Action == KeyEventActions.Down && e.KeyCode == Keycode.Enter)
+				{
+					_searchButton.PerformClick();
+				}
+				else 
+				{
+					e.Handled = false;
+				}
+			};
 
             _gamesButton.Enabled = false;
 		}
