@@ -1,27 +1,20 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="TheGameDB\Adapters\SearchAdapter.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="TheGameDB\Activities\FBWebViewAuthActivity.cs">
     <Files>
-      <File FileName="TheGameDB\Activities\MainActivity.cs" Line="1" Column="1" />
-      <File FileName="TheGameDB\Activities\ProfileActivity.cs" Line="1" Column="1" />
-      <File FileName="TheGameDB\Core\LoginViewModel.cs" Line="1" Column="1" />
-      <File FileName="TheGameDB\Core\IWebService.cs" Line="1" Column="1" />
-      <File FileName="TheGameDB\Activities\GameActivity.cs" Line="1" Column="1" />
-      <File FileName="TheGameDB\Activities\PlatformActivity.cs" Line="1" Column="1" />
-      <File FileName="TheGameDB\API\Platform.cs" Line="1" Column="1" />
-      <File FileName="TheGameDB\API\GamesList.cs" Line="1" Column="1" />
-      <File FileName="TheGameDB\API\PlatformsList.cs" Line="1" Column="1" />
-      <File FileName="TheGameDB\API\Game.cs" Line="1" Column="1" />
-      <File FileName="TheGameDB\Activities\LoginActivity.cs" Line="1" Column="1" />
-      <File FileName="TheGameDB\Activities\FBWebViewAuthActivity.cs" Line="1" Column="1" />
-      <File FileName="TheGameDB\Activities\CreateAccountActivity.cs" Line="1" Column="1" />
       <File FileName="TheGameDB\Activities\BaseActivity.cs" Line="1" Column="1" />
-      <File FileName="TheGameDB\API\User.cs" Line="1" Column="1" />
+      <File FileName="TheGameDB\Activities\CreateAccountActivity.cs" Line="1" Column="1" />
+      <File FileName="TheGameDB\Activities\FBWebViewAuthActivity.cs" Line="1" Column="1" />
+      <File FileName="TheGameDB\Activities\GameActivity.cs" Line="1" Column="1" />
+      <File FileName="TheGameDB\Activities\LoginActivity.cs" Line="1" Column="1" />
+      <File FileName="TheGameDB\Activities\MainActivity.cs" Line="1" Column="1" />
+      <File FileName="TheGameDB\Activities\PlatformActivity.cs" Line="1" Column="1" />
+      <File FileName="TheGameDB\Activities\ProfileActivity.cs" Line="1" Column="1" />
       <File FileName="TheGameDB\Core\BaseViewModel.cs" Line="1" Column="1" />
       <File FileName="TheGameDB\Core\ISettings.cs" Line="1" Column="1" />
+      <File FileName="TheGameDB\Core\IWebService.cs" Line="1" Column="1" />
+      <File FileName="TheGameDB\Core\LoginViewModel.cs" Line="1" Column="1" />
       <File FileName="TheGameDB\Core\ServiceContainer.cs" Line="1" Column="1" />
-      <File FileName="TheGameDB\Application.cs" Line="1" Column="1" />
-      <File FileName="TheGameDB\Adapters\SearchAdapter.cs" Line="12" Column="48" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

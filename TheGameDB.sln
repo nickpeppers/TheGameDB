@@ -17,4 +17,7 @@ Global
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = TheGameDB\TheGameDB.csproj
 	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
 EndGlobal
