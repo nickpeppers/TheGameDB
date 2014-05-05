@@ -10,6 +10,7 @@ using Android.Views;
 using Android.Widget;
 using TheGameDB;
 
+// Sets Models on app start to use throughout all activities
 namespace XamChat.Droid
 {
 	[Application(Theme = "@android:style/Theme.Holo.NoActionBar.Fullscreen")]

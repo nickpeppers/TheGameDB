@@ -11,6 +11,7 @@ namespace TheGameDB
 
         public bool UserExists { get; set; }
 
+        // Task to Check if user exists in the db and save to settings
         public async Task CheckExistingUser(Context context)
         {
             try
@@ -50,6 +51,7 @@ namespace TheGameDB
             }
         }
 
+        // Task to Change Account Identifier for a User in the db and save to settings
 		public async Task UpdateAccountIdentifier(Context context)
 		{
 			IsBusy = true;
@@ -73,6 +75,7 @@ namespace TheGameDB
 			}
 		}
 
+        // Task to login a User and save to settings
         public async Task Login(Context context)
         {
             if (string.IsNullOrEmpty(User.AccountIdentifier))

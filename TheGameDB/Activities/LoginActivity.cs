@@ -32,6 +32,7 @@ namespace TheGameDB
 			_loginButton = FindViewById<Button>(Resource.Id.LoginButton);
 			_loginButton.Enabled = false;
 
+            // Starts fb login
 			_loginButton.Click += (sender, e) => 
             {
                 var webAuth = new Intent (this, typeof (FBWebViewAuthActivity));
@@ -40,6 +41,7 @@ namespace TheGameDB
                 StartActivityForResult (webAuth, 0);
             };
 
+            // Checks if user is already logged in
             if (viewModel.settings.User != null)
             {
                 viewModel.User = viewModel.settings.User;
@@ -52,6 +54,7 @@ namespace TheGameDB
             }
         }
 
+        // Gets called when fb login ends
         protected override async void OnActivityResult (int requestCode, Result resultCode, Intent data)
         {
             base.OnActivityResult (requestCode, resultCode, data);
@@ -86,6 +89,7 @@ namespace TheGameDB
                        
                         try
                         {
+                            // checks if user is already in db
                             await viewModel.CheckExistingUser(this);
                             if(viewModel.UserExists)
                             {
@@ -117,6 +121,7 @@ namespace TheGameDB
             }
         }
 
+        // Method to easily create Alert Popups
         public void Alert (string title, string message, bool CancelButton , Action<Result> callback)
         {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);

@@ -10,6 +10,7 @@ namespace TheGameDB
 		public string PlatformName{ get; set; }
 		public string PlatformAlias { get; set; }
 
+        // Parses list of platforms from xml
         public List<PlatformsList> GetPlatformsList()
 		{
 		    XmlDocument doc = new XmlDocument ();

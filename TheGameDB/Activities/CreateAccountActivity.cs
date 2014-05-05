@@ -33,6 +33,7 @@ namespace TheGameDB
                 }
                 else
                 {
+                    // Adds entered account identifier to User and tries to log in user
                     viewModel.User.AccountIdentifier = accountIdentifierEditText.Text;
                     await viewModel.Login(this);
                     StartActivity(typeof(MainActivity));

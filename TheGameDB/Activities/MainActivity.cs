@@ -56,6 +56,7 @@ namespace TheGameDB
                 _platformsButton.Enabled = false;
                 _gamesButton.Enabled = true;
 
+                // Creates List of PlatformList
 				_listView.Adapter = new ArrayAdapter<PlatformsList>(this, Android.Resource.Layout.SimpleListItem1, _platformList);
             };
            
@@ -66,17 +67,20 @@ namespace TheGameDB
 
 				_gamesList = new GamesList().GetGameList(searchEditText.Text);
 
+                // Creates List of Games
 				_listView.Adapter = new SearchAdapter(this, _gamesList);
             };
 
 			_listView.ItemClick += (sender, e) => 
 			{
+                // if Select Game row in list
 				if(!_gamesButton.Enabled)
 				{
 					var gameIntent = new Intent(this, typeof(GameActivity));
 					gameIntent.PutExtra("GameId", _gamesList[e.Position].GameId);
 					StartActivity(gameIntent);
 				}
+                // if Select Platform row in list
 				else
 				{
 					var platformIntent = new Intent(this, typeof(PlatformActivity));
@@ -85,6 +89,7 @@ namespace TheGameDB
 				}
 			};
 				
+            // Searches if enter is pressed on keyboard
 			searchEditText.KeyPress += (object sender, View.KeyEventArgs e) => 
 			{
 				if(e.Event.Action == KeyEventActions.Down && e.KeyCode == Keycode.Enter)

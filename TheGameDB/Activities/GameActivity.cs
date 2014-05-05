@@ -22,7 +22,10 @@ namespace TheGameDB
 
 			SetContentView (Resource.Layout.GameLayout);
 
+            // Gets Game Id from previous activity
             var gameId = Intent.GetStringExtra("GameId");
+
+            // Loads game Info
             var game = new Game().GetGame(gameId);
 
 			var image = FindViewById<ImageView> (Resource.Id.GameImage);
@@ -36,6 +39,7 @@ namespace TheGameDB
             var developer = FindViewById<TextView>(Resource.Id.GameDeveloperText);
             var rating = FindViewById<TextView>(Resource.Id.GameRatingText);
 
+            // Sets text
             gameTitle.Text = game.GameTitle;
             platform.Text = game.Platform;
             releaseDate.Text = "Release Date: " + game.ReleaseDate;
@@ -46,6 +50,7 @@ namespace TheGameDB
             developer.Text = "Developer: " + game.Developer;
             rating.Text = "Rating: " + game.Rating;
 
+            // Loads image asynchronously from url
             if (!string.IsNullOrEmpty (game.Image)) 
             {
                 try
@@ -62,8 +67,6 @@ namespace TheGameDB
 
                 }
             }
-
-            //TODO: Forgot to add place for ESRB rating
 		}
 	}
 }

@@ -14,15 +14,13 @@ namespace TheGameDB
         public string ReleaseDate { get; set; }
 		public string OverView { get; set; }
 		public string ESRB { get; set; }
-        //TODO: Multiple genres work
-        //public string Genres { get; set; }
         public string Players { get; set; }
         public string CoOperative { get; set; }
 		public string Publisher { get; set; }
 		public string Developer { get; set; }
 		public string Rating { get; set; }
-		//TODO: Fan Art Class 
 
+        // Parses Game information from Xml
         public Game GetGame(string GameId)
         {
             XmlDocument doc = new XmlDocument ();
@@ -143,6 +141,7 @@ namespace TheGameDB
                 }
             }
 
+            // Gets url for Game Image
 			nodes = doc.DocumentElement.SelectNodes("/Data/Game/Images/boxart");
 
 			if(nodes != null)

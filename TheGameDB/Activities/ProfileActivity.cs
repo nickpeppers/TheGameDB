@@ -37,6 +37,7 @@ namespace TheGameDB
 				{
 					try
 					{
+                        // Changes account Identifier
 						viewModel.User.AccountIdentifier = accountIdentifier.Text;
 						await viewModel.UpdateAccountIdentifier(this);
 					}

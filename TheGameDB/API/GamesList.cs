@@ -11,7 +11,7 @@ namespace TheGameDB
 		public string ReleaseDate { get; set; }
         public string Platform {get; set;}
 
-
+        // Parses list of games from xml
         public List<GamesList> GetGameList(string SearchText)
         {
 			XmlDocument doc = new XmlDocument ();

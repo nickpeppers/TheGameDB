@@ -22,7 +22,10 @@ namespace TheGameDB
 
 			SetContentView (Resource.Layout.PlatformLayout);
 
+            // Gets PlatformId from previous activity
             var platformId = Intent.GetStringExtra("PlatformId");
+
+            // Gets Platform infromation
             var platform = new Platform().GetPlatform(platformId);
 
             var image = FindViewById<ImageView>(Resource.Id.PlatformImage);
@@ -39,6 +42,7 @@ namespace TheGameDB
             var maxControllers = FindViewById<TextView>(Resource.Id.PlatformMaxControllersText);
             var rating = FindViewById<TextView>(Resource.Id.PlatformRatingText);
 
+            // Sets text
             title.Text = platform.PlatformTitle;
             overview.Text = platform.Overview;
             developer.Text = "Developer: " + platform.Developer;
@@ -52,6 +56,7 @@ namespace TheGameDB
             maxControllers.Text = "Max Controllers: " + platform.MaxControllers;
             rating.Text = "Rating: " + platform.Rating;
 
+            // Asynchronously loads image from url
             if (!string.IsNullOrEmpty (platform.Image)) 
             {
                 try

@@ -5,6 +5,7 @@ namespace TheGameDB
 {
 	public class IWebService
 	{
+        // Checks db for if the User is in it based on UserId
 		public async Task<bool> CheckExistingUser(User User)
 		{
 			var userExists =  await AzureService.MobileService.GetTable<User>().Where (t => t.UserId == User.UserId).ToListAsync ();
@@ -18,6 +19,7 @@ namespace TheGameDB
 			}
 		}
 
+        // Updates User Account Identifier in db
 		public async Task<User> UpdateAccountIdentifier(User User)
 		{
 			await AzureService.MobileService.GetTable<User>().UpdateAsync(User);
@@ -25,6 +27,7 @@ namespace TheGameDB
 			return User;
 		}
 
+        // Adds user to db
 		public async Task<User> Login(User User)
 		{
 			var user = new User

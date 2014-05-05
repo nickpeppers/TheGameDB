@@ -20,8 +20,8 @@ namespace TheGameDB
         public string Media { get; set; }
         public string MaxControllers { get; set; }
         public string Rating { get; set; }
-        //TODO: Need to do get images
 
+        // Parses Platform Information from Xml document
 		public Platform GetPlatform(string PlatformId)
         {
             XmlDocument doc = new XmlDocument ();
@@ -142,6 +142,7 @@ namespace TheGameDB
                 }
             }
 
+            // Gets Image Url for platform
             nodes = doc.DocumentElement.SelectNodes("/Data/Platform/Images/boxart");
 
             if(nodes != null)

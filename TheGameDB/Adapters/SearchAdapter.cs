@@ -9,6 +9,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 
+// Custom Array Adapter for Game ListViwe Items
 namespace TheGameDB
 {
 	public class SearchAdapter : BaseAdapter<GamesList>

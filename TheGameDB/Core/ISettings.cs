@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+// Saves app settings for when app is closed
 namespace TheGameDB
 {
     public class ISettings
