@@ -14,6 +14,7 @@ namespace TheGameDB
         // Task to Check if user exists in the db and save to settings
         public async Task CheckExistingUser(Context context)
         {
+            IsBusy = true;
             try
             {
                 bool userExists = await service.CheckExistingUser(User);
