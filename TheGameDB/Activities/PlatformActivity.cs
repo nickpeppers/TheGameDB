@@ -14,7 +14,7 @@ using System.Net.Http;
 namespace TheGameDB
 {
 	[Activity (Label = "PlatformActivity")]			
-	public class PlatformActivity : BaseActivity<LoginViewModel>
+    public class PlatformActivity : BaseActivity<ISettings>
 	{
         protected override async void OnCreate (Bundle bundle)
 		{
@@ -22,11 +22,9 @@ namespace TheGameDB
 
 			SetContentView (Resource.Layout.PlatformLayout);
 
-            // Gets PlatformId from previous activity
             var platformId = Intent.GetStringExtra("PlatformId");
 
-            // Gets Platform infromation
-            var platform = new Platform().GetPlatform(platformId);
+            var platform = new GamesDBService().GetPlatform(platformId);
 
             var image = FindViewById<ImageView>(Resource.Id.PlatformImage);
             var title = FindViewById<TextView>(Resource.Id.PlatformTitleText);
@@ -42,7 +40,6 @@ namespace TheGameDB
             var maxControllers = FindViewById<TextView>(Resource.Id.PlatformMaxControllersText);
             var rating = FindViewById<TextView>(Resource.Id.PlatformRatingText);
 
-            // Sets text
             title.Text = platform.PlatformTitle;
             overview.Text = platform.Overview;
             developer.Text = "Developer: " + platform.Developer;
@@ -56,7 +53,6 @@ namespace TheGameDB
             maxControllers.Text = "Max Controllers: " + platform.MaxControllers;
             rating.Text = "Rating: " + platform.Rating;
 
-            // Asynchronously loads image from url
             if (!string.IsNullOrEmpty (platform.Image)) 
             {
                 try

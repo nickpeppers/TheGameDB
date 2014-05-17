@@ -10,7 +10,6 @@ using Android.Views;
 using Android.Widget;
 using TheGameDB;
 
-// Sets Models on app start to use throughout all activities
 namespace XamChat.Droid
 {
 	[Application(Theme = "@android:style/Theme.Holo.NoActionBar.Fullscreen")]
@@ -26,12 +25,7 @@ namespace XamChat.Droid
         {
             base.OnCreate();
 
-            //ViewModels
-            ServiceContainer.Register<LoginViewModel>(() => new LoginViewModel());
-
-            //Models
 			ServiceContainer.Register<ISettings>(() => new ISettings(this));
-            ServiceContainer.Register<IWebService>(() => new IWebService());
         }
     }
 }

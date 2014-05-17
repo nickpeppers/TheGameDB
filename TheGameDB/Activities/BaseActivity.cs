@@ -9,7 +9,6 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 
-// All activities extend base activity for ViewModel Usage and loading dialogs
 namespace TheGameDB
 {
     [Activity]			

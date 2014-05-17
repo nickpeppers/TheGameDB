@@ -6,8 +6,7 @@ namespace TheGameDB
 {
     public class BaseViewModel
     {
-        protected readonly IWebService service = ServiceContainer.Resolve<IWebService>();
-        public readonly ISettings settings = ServiceContainer.Resolve<ISettings>();
+        protected readonly ISettings settings = ServiceContainer.Resolve<ISettings>();
 
         public event EventHandler IsBusyChanged = delegate { };
 

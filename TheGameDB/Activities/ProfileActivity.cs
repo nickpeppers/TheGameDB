@@ -12,7 +12,7 @@ using Android.Widget;
 namespace TheGameDB
 {
 	[Activity (Label = "ProfileActivity")]			
-	public class ProfileActivity : BaseActivity<LoginViewModel>
+    public class ProfileActivity : BaseActivity<ISettings>
 	{
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -23,7 +23,7 @@ namespace TheGameDB
 			var accountIdentifier = FindViewById<EditText> (Resource.Id.ProfileAccountIdentifierEditText);
 
 			var changeIdentifierButton = FindViewById<Button> (Resource.Id.ProfileChangeIdentifierButton);
-			changeIdentifierButton.Click += async (sender, e) => 
+			changeIdentifierButton.Click += (sender, e) => 
 			{
 				if(string.IsNullOrEmpty(accountIdentifier.Text))
 				{
@@ -37,9 +37,7 @@ namespace TheGameDB
 				{
 					try
 					{
-                        // Changes account Identifier
-						viewModel.User.AccountIdentifier = accountIdentifier.Text;
-						await viewModel.UpdateAccountIdentifier(this);
+
 					}
 					finally
 					{

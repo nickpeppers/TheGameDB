@@ -64,27 +64,22 @@
   <ItemGroup>
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="API\AzureService.cs" />
-    <Compile Include="API\User.cs" />
     <Compile Include="API\Game.cs" />
     <Compile Include="API\PlatformsList.cs" />
     <Compile Include="API\GamesList.cs" />
     <Compile Include="API\Platform.cs" />
     <Compile Include="Core\ServiceContainer.cs" />
     <Compile Include="Core\BaseViewModel.cs" />
-    <Compile Include="Core\LoginViewModel.cs" />
     <Compile Include="Core\ISettings.cs" />
-    <Compile Include="Core\IWebService.cs" />
     <Compile Include="Activities\LoginActivity.cs" />
     <Compile Include="Activities\MainActivity.cs" />
-    <Compile Include="Activities\FBWebViewAuthActivity.cs" />
-    <Compile Include="Activities\CreateAccountActivity.cs" />
     <Compile Include="Activities\BaseActivity.cs" />
     <Compile Include="Application.cs" />
     <Compile Include="Adapters\SearchAdapter.cs" />
     <Compile Include="Activities\GameActivity.cs" />
     <Compile Include="Activities\PlatformActivity.cs" />
     <Compile Include="Activities\ProfileActivity.cs" />
+    <Compile Include="API\GamesDBService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

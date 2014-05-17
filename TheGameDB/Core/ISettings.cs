@@ -14,7 +14,7 @@ using System.Text;
 // Saves app settings for when app is closed
 namespace TheGameDB
 {
-    public class ISettings
+    public class ISettings : BaseViewModel
     {
 		private readonly Context _context;
 		private ISharedPreferences _preferences;
@@ -23,12 +23,6 @@ namespace TheGameDB
 		public ISettings(Context context)
 		{
 			_context = context;
-		}
-
-		public User User
-		{
-			get { return GetObject<User>("User"); }
-			set { Put("User", value); }
 		}
 
 		public bool IsLoggedIn
