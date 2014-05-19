@@ -16,23 +16,6 @@
             android:layout_height="fill_parent"
             android:minWidth="25px"
             android:minHeight="25px">
-            <LinearLayout
-                android:orientation="horizontal"
-                android:minWidth="25px"
-                android:minHeight="25px"
-                android:layout_width="fill_parent"
-                android:layout_height="44dp"
-                android:id="@+id/StatusBarLinearLayout"
-                android:layout_marginBottom="3dp"
-                android:background="#ff4c4c4c">
-                <Button
-                    android:text="Platform"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:id="@+id/MainPlatformsSearchBarButton"
-                    android:layout_weight="1"
-                    android:background="#aa000000" />
-            </LinearLayout>
             <ImageView
                 android:id="@+id/PlatformImage"
                 android:minHeight="0dp"

@@ -10,10 +10,11 @@ using Android.Views;
 using Android.Widget;
 using System.Net.Http;
 using Android.Graphics.Drawables;
+using Android.Content.PM;
 
 namespace TheGameDB
 {
-	[Activity (Label = "GameActivity")]			
+    [Activity (Label = "Game", LaunchMode = LaunchMode.SingleInstance)]			
     public class GameActivity : BaseActivity<SettingsViewModel>
 	{
 		protected override async void OnCreate (Bundle bundle)

@@ -81,6 +81,8 @@
     <Compile Include="Activities\SplashScreenActivity.cs" />
     <Compile Include="Activities\BaseActivity.cs" />
     <Compile Include="Core\SettingsViewModel.cs" />
+    <Compile Include="Fragments\GameTabFragment.cs" />
+    <Compile Include="Fragments\PlatformTabFragment.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -99,6 +101,8 @@
     <AndroidResource Include="Resources\layout\SplashScreenLayout.axml" />
     <AndroidResource Include="Resources\anim\splash_fade_in.xml" />
     <AndroidResource Include="Resources\anim\splash_fade_out.xml" />
+    <AndroidResource Include="Resources\layout\GameSearchTabLayout.axml" />
+    <AndroidResource Include="Resources\layout\PlatformTabLayout.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
@@ -119,5 +123,6 @@
     <Folder Include="Activities\" />
     <Folder Include="Adapters\" />
     <Folder Include="Resources\anim\" />
+    <Folder Include="Fragments\" />
   </ItemGroup>
 </Project>
