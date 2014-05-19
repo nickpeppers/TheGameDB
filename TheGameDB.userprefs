@@ -1,12 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="TheGameDB\Core\ISettings.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="TheGameDB\Activities\MainActivity.cs">
     <Files>
-      <File FileName="TheGameDB\Activities\MainActivity.cs" Line="18" Column="30" />
-      <File FileName="TheGameDB\Activities\SplashScreenActivity.cs" Line="21" Column="6" />
-      <File FileName="c:\Users\smari_000\Documents\GitHub\TheGameDB\TheGameDB\Core\ServiceContainer.cs" Line="16" Column="37" />
-      <File FileName="TheGameDB\Activities\PlatformActivity.cs" Line="17" Column="60" />
-      <File FileName="TheGameDB\Core\ISettings.cs" Line="13" Column="1" />
+      <File FileName="TheGameDB\Activities\MainActivity.cs" Line="10" Column="24" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
