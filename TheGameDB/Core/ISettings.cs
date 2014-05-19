@@ -11,10 +11,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-// Saves app settings for when app is closed
 namespace TheGameDB
 {
-    public class ISettings : BaseViewModel
+    public class ISettings
     {
 		private readonly Context _context;
 		private ISharedPreferences _preferences;

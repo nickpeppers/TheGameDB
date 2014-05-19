@@ -14,7 +14,7 @@ using System.Net.Http;
 namespace TheGameDB
 {
 	[Activity (Label = "PlatformActivity")]			
-    public class PlatformActivity : BaseActivity<ISettings>
+    public class PlatformActivity : BaseActivity<SettingsViewModel>
 	{
         protected override async void OnCreate (Bundle bundle)
 		{

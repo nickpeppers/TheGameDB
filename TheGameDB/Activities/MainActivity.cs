@@ -15,7 +15,7 @@ using Android.Content.PM;
 namespace TheGameDB
 {
     [Activity (Label = "TheGamesDB", ConfigurationChanges = ConfigChanges.Orientation|ConfigChanges.ScreenSize)]
-    public class MainActivity :  BaseActivity<ISettings>
+    public class MainActivity : BaseActivity<SettingsViewModel>
 	{
         private Button _searchButton;
         private Button _gamesButton;

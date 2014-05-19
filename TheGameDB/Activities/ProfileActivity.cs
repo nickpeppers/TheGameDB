@@ -12,7 +12,7 @@ using Android.Widget;
 namespace TheGameDB
 {
 	[Activity (Label = "ProfileActivity")]			
-    public class ProfileActivity : BaseActivity<ISettings>
+    public class ProfileActivity : BaseActivity<SettingsViewModel>
 	{
 		protected override void OnCreate (Bundle bundle)
 		{

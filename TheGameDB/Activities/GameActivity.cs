@@ -14,7 +14,7 @@ using Android.Graphics.Drawables;
 namespace TheGameDB
 {
 	[Activity (Label = "GameActivity")]			
-    public class GameActivity : BaseActivity<ISettings>
+    public class GameActivity : BaseActivity<SettingsViewModel>
 	{
 		protected override async void OnCreate (Bundle bundle)
 		{

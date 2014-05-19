@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 
-// Generic class used to register Models
 namespace TheGameDB
 {
     public static class ServiceContainer
