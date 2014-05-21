@@ -15,7 +15,7 @@ using System.Threading;
 
 namespace TheGameDB
 {
-    [Activity(Label = "TheGamesDB", MainLauncher = true, Theme="@android:style/Theme.Holo.NoActionBar.Fullscreen")]			
+    [Activity(Label = "TheGamesDB", MainLauncher = true, Theme="@android:style/Theme.Holo.NoActionBar.Fullscreen", LaunchMode = LaunchMode.SingleInstance)]			
     public class SplashScreenActivity : Activity
     {
         private Animation _fadeIn, _fadeOut;
