@@ -8,10 +8,13 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Android.Graphics.Drawables;
+using Android.Graphics;
+using Android.Content.PM;
 
 namespace TheGameDB
 {
-	[Activity (Label = "ProfileActivity")]			
+    [Activity (Label = "Settings", LaunchMode = LaunchMode.SingleInstance)]			
     public class ProfileActivity : BaseActivity<SettingsViewModel>
 	{
 		protected override void OnCreate (Bundle bundle)
@@ -46,6 +49,39 @@ namespace TheGameDB
 				}
 			};
 		}
+
+        public override bool OnCreateOptionsMenu(IMenu menu)
+        {
+            MenuInflater.Inflate (Resource.Menu.ActionBarMenu, menu);       
+
+            var favoriteMenuItem = menu.FindItem (Resource.Id.FavoriteMenuItem);
+            var unFavoriteMenuItem = menu.FindItem (Resource.Id.UnFavoriteMenuItem); 
+            var rateMenuItem = menu.FindItem (Resource.Id.RateAppMenuItem);    
+            var settingsMenuItem = menu.FindItem (Resource.Id.SettingsMenuItem); 
+            var helpMenuItem = menu.FindItem(Resource.Id.HelpMenuItem);
+
+            favoriteMenuItem.SetVisible(false);
+            unFavoriteMenuItem.SetVisible(false);
+            settingsMenuItem.SetVisible(false);
+            return true;
+        }
+
+        public override bool OnMenuItemSelected(int featureId, IMenuItem item)
+        {
+            switch (item.TitleFormatted.ToString())
+            {
+                case "Rate App":
+                    {
+                        return true;
+                    }
+                case "Help":
+                    {
+                        return true;
+                    }
+                default:
+                    return base.OnMenuItemSelected(featureId, item);
+            }
+        }
 	}
 }
 

@@ -11,6 +11,7 @@ using Android.Widget;
 using System.Net.Http;
 using Android.Graphics.Drawables;
 using Android.Content.PM;
+using Android.Graphics;
 
 namespace TheGameDB
 {
@@ -65,6 +66,65 @@ namespace TheGameDB
                 }
             }
 		}
+
+        public override bool OnCreateOptionsMenu(IMenu menu)
+        {
+            MenuInflater.Inflate (Resource.Menu.ActionBarMenu, menu);       
+
+            var favoriteMenuItem = menu.FindItem (Resource.Id.FavoriteMenuItem);  
+            var unFavoriteMenuItem = menu.FindItem (Resource.Id.UnFavoriteMenuItem); 
+            var rateMenuItem = menu.FindItem (Resource.Id.RateAppMenuItem);    
+            var settingsMenuItem = menu.FindItem (Resource.Id.SettingsMenuItem); 
+            var helpMenuItem = menu.FindItem(Resource.Id.HelpMenuItem);
+
+            //TODO: Need to get list of favorites and check if favorite is true
+            bool isFavorite = false;
+            if (isFavorite)
+            {
+                unFavoriteMenuItem.SetVisible(true);
+                favoriteMenuItem.SetVisible(false);
+                isFavorite = false;
+            }
+            else
+            {
+                unFavoriteMenuItem.SetVisible(false);
+                favoriteMenuItem.SetVisible(true);
+                isFavorite = true;
+            }
+
+            return true;
+        }
+
+        public override bool OnMenuItemSelected(int featureId, IMenuItem item)
+        {
+            switch (item.TitleFormatted.ToString())
+            {
+                case "Favorite":
+                    {
+                        return true;
+                    }
+                case "Unfavorite":
+                    {
+
+                        return true;
+                    }
+                case "Rate App":
+                    {
+                        return true;
+                    }
+                case "Settings":
+                    {
+                        StartActivity(typeof(ProfileActivity));
+                        return true;
+                    }
+                case "Help":
+                    {
+                        return true;
+                    }
+                default:
+                    return base.OnMenuItemSelected(featureId, item);
+            }
+        }
 	}
 }
 

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+  <item android:id="@+id/FavoriteMenuItem"
+      android:showAsAction="always"
+      android:title="@string/favoriteText" />
+  <item android:id="@+id/UnFavoriteMenuItem"
+      android:showAsAction="always"
+      android:title="@string/unFavoriteText" />
+  <item android:id="@+id/RateAppMenuItem"
+      android:title="@string/rateAppText" />
+  <item android:id="@+id/SettingsMenuItem"
+      android:title="@string/settingsText" />
+  <item android:id="@+id/HelpMenuItem"
+      android:title="@string/helpText" />
+</menu>

@@ -1,5 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="facebookLogin">Log In to Facebook</string>
-	<string name="app_name">FacebookSample.Android</string>
+	<string name="favoriteText">Favorite</string>
+	<string name="unFavoriteText">Unfavorite</string>
+	<string name="rateAppText">Rate App</string>	
+	<string name="settingsText">Settings</string>
+	<string name="helpText">Help</string>
 </resources>

@@ -11,6 +11,7 @@ using Android.Widget;
 using Android.Graphics.Drawables;
 using System.Net.Http;
 using Android.Content.PM;
+using Android.Graphics;
 
 namespace TheGameDB
 {
@@ -40,6 +41,7 @@ namespace TheGameDB
             var media = FindViewById<TextView>(Resource.Id.PlatformMediaText);
             var maxControllers = FindViewById<TextView>(Resource.Id.PlatformMaxControllersText);
             var rating = FindViewById<TextView>(Resource.Id.PlatformRatingText);
+            //TODO: Add butt to take you to list of platform games
 
             title.Text = platform.PlatformTitle;
             overview.Text = platform.Overview;
@@ -71,6 +73,44 @@ namespace TheGameDB
                 }
             }
 		}
+
+        public override bool OnCreateOptionsMenu(IMenu menu)
+        {
+            MenuInflater.Inflate (Resource.Menu.ActionBarMenu, menu);       
+
+            var favoriteMenuItem = menu.FindItem (Resource.Id.FavoriteMenuItem); 
+            var unFavoriteMenuItem = menu.FindItem (Resource.Id.UnFavoriteMenuItem); 
+            var rateMenuItem = menu.FindItem (Resource.Id.RateAppMenuItem);    
+            var settingsMenuItem = menu.FindItem (Resource.Id.SettingsMenuItem); 
+            var helpMenuItem = menu.FindItem(Resource.Id.HelpMenuItem);
+
+            favoriteMenuItem.SetVisible(false);
+            unFavoriteMenuItem.SetVisible(false);
+
+            return true;
+        }
+
+        public override bool OnMenuItemSelected(int featureId, IMenuItem item)
+        {
+            switch (item.TitleFormatted.ToString())
+            {
+                case "Rate App":
+                    {
+                        return true;
+                    }
+                case "Settings":
+                    {
+                        StartActivity(typeof(ProfileActivity));
+                        return true;
+                    }
+                case "Help":
+                    {
+                        return true;
+                    }
+                default:
+                    return base.OnMenuItemSelected(featureId, item);
+            }
+        }
 	}
 }
 

@@ -9,7 +9,6 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using TheGameDB;
-using Facebook;
 using Android.Content.PM;
 using Android.Views.Animations;
 using System.Threading;

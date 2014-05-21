@@ -26,7 +26,6 @@ namespace TheGameDB
 		
 		public static void UpdateIdValues()
 		{
-			global::FacebookMonoDroid.Resource.String.library_name = global::TheGameDB.Resource.String.library_name;
 		}
 		
 		public partial class Animation
@@ -83,131 +82,140 @@ namespace TheGameDB
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f060007
-			public const int GameCoopText = 2131099655;
+			// aapt resource value: 0x7f070028
+			public const int FavoriteMenuItem = 2131165224;
 			
-			// aapt resource value: 0x7f06000a
-			public const int GameDeveloperText = 2131099658;
+			// aapt resource value: 0x7f070007
+			public const int GameCoopText = 2131165191;
 			
-			// aapt resource value: 0x7f060008
-			public const int GameGenresText = 2131099656;
+			// aapt resource value: 0x7f07000a
+			public const int GameDeveloperText = 2131165194;
 			
-			// aapt resource value: 0x7f060000
-			public const int GameImage = 2131099648;
+			// aapt resource value: 0x7f070008
+			public const int GameGenresText = 2131165192;
 			
-			// aapt resource value: 0x7f060004
-			public const int GameOverviewText = 2131099652;
+			// aapt resource value: 0x7f070000
+			public const int GameImage = 2131165184;
 			
-			// aapt resource value: 0x7f060002
-			public const int GamePlatformText = 2131099650;
+			// aapt resource value: 0x7f070004
+			public const int GameOverviewText = 2131165188;
 			
-			// aapt resource value: 0x7f060006
-			public const int GamePlayersText = 2131099654;
+			// aapt resource value: 0x7f070002
+			public const int GamePlatformText = 2131165186;
 			
-			// aapt resource value: 0x7f06000b
-			public const int GamePublisherText = 2131099659;
+			// aapt resource value: 0x7f070006
+			public const int GamePlayersText = 2131165190;
 			
-			// aapt resource value: 0x7f060003
-			public const int GameRatingText = 2131099651;
+			// aapt resource value: 0x7f07000b
+			public const int GamePublisherText = 2131165195;
 			
-			// aapt resource value: 0x7f060009
-			public const int GameReleaseDateText = 2131099657;
+			// aapt resource value: 0x7f070003
+			public const int GameRatingText = 2131165187;
 			
-			// aapt resource value: 0x7f06000c
-			public const int GameTabSearchBarLayout = 2131099660;
+			// aapt resource value: 0x7f070009
+			public const int GameReleaseDateText = 2131165193;
 			
-			// aapt resource value: 0x7f06000e
-			public const int GameTabSearchButton = 2131099662;
+			// aapt resource value: 0x7f07000c
+			public const int GameTabSearchBarLayout = 2131165196;
 			
-			// aapt resource value: 0x7f06000d
-			public const int GameTabSearchEditText = 2131099661;
+			// aapt resource value: 0x7f07000e
+			public const int GameTabSearchButton = 2131165198;
 			
-			// aapt resource value: 0x7f060010
-			public const int GameTabSearchListView = 2131099664;
+			// aapt resource value: 0x7f07000d
+			public const int GameTabSearchEditText = 2131165197;
 			
-			// aapt resource value: 0x7f06000f
-			public const int GameTabSearchTableLayout = 2131099663;
+			// aapt resource value: 0x7f070010
+			public const int GameTabSearchListView = 2131165200;
 			
-			// aapt resource value: 0x7f060001
-			public const int GameTitleText = 2131099649;
+			// aapt resource value: 0x7f07000f
+			public const int GameTabSearchTableLayout = 2131165199;
 			
-			// aapt resource value: 0x7f060029
-			public const int GamesDBLoginImageView = 2131099689;
+			// aapt resource value: 0x7f070001
+			public const int GameTitleText = 2131165185;
 			
-			// aapt resource value: 0x7f060025
-			public const int MainProfileSearchBarButton = 2131099685;
+			// aapt resource value: 0x7f070027
+			public const int GamesDBLoginImageView = 2131165223;
 			
-			// aapt resource value: 0x7f060015
-			public const int MainSearchRowPlatformTextView = 2131099669;
+			// aapt resource value: 0x7f07002c
+			public const int HelpMenuItem = 2131165228;
 			
-			// aapt resource value: 0x7f060014
-			public const int MainSearchRowReleaseTextView = 2131099668;
+			// aapt resource value: 0x7f070015
+			public const int MainSearchRowPlatformTextView = 2131165205;
 			
-			// aapt resource value: 0x7f060013
-			public const int MainSearchRowTitleTextView = 2131099667;
+			// aapt resource value: 0x7f070014
+			public const int MainSearchRowReleaseTextView = 2131165204;
 			
-			// aapt resource value: 0x7f06001c
-			public const int PlatformCPUText = 2131099676;
+			// aapt resource value: 0x7f070013
+			public const int MainSearchRowTitleTextView = 2131165203;
 			
-			// aapt resource value: 0x7f06001a
-			public const int PlatformDeveloperText = 2131099674;
+			// aapt resource value: 0x7f07001c
+			public const int PlatformCPUText = 2131165212;
 			
-			// aapt resource value: 0x7f060020
-			public const int PlatformDisplayText = 2131099680;
+			// aapt resource value: 0x7f07001a
+			public const int PlatformDeveloperText = 2131165210;
 			
-			// aapt resource value: 0x7f06001e
-			public const int PlatformGraphicsText = 2131099678;
+			// aapt resource value: 0x7f070020
+			public const int PlatformDisplayText = 2131165216;
 			
-			// aapt resource value: 0x7f060016
-			public const int PlatformImage = 2131099670;
+			// aapt resource value: 0x7f07001e
+			public const int PlatformGraphicsText = 2131165214;
 			
-			// aapt resource value: 0x7f06001b
-			public const int PlatformManufacturerText = 2131099675;
+			// aapt resource value: 0x7f070016
+			public const int PlatformImage = 2131165206;
 			
-			// aapt resource value: 0x7f060022
-			public const int PlatformMaxControllersText = 2131099682;
+			// aapt resource value: 0x7f07001b
+			public const int PlatformManufacturerText = 2131165211;
 			
-			// aapt resource value: 0x7f060021
-			public const int PlatformMediaText = 2131099681;
+			// aapt resource value: 0x7f070022
+			public const int PlatformMaxControllersText = 2131165218;
 			
-			// aapt resource value: 0x7f06001d
-			public const int PlatformMemoryText = 2131099677;
+			// aapt resource value: 0x7f070021
+			public const int PlatformMediaText = 2131165217;
 			
-			// aapt resource value: 0x7f060019
-			public const int PlatformOverviewText = 2131099673;
+			// aapt resource value: 0x7f07001d
+			public const int PlatformMemoryText = 2131165213;
 			
-			// aapt resource value: 0x7f060018
-			public const int PlatformRatingText = 2131099672;
+			// aapt resource value: 0x7f070019
+			public const int PlatformOverviewText = 2131165209;
 			
-			// aapt resource value: 0x7f06001f
-			public const int PlatformSoundText = 2131099679;
+			// aapt resource value: 0x7f070018
+			public const int PlatformRatingText = 2131165208;
 			
-			// aapt resource value: 0x7f060023
-			public const int PlatformTabListView = 2131099683;
+			// aapt resource value: 0x7f07001f
+			public const int PlatformSoundText = 2131165215;
 			
-			// aapt resource value: 0x7f060017
-			public const int PlatformTitleText = 2131099671;
+			// aapt resource value: 0x7f070023
+			public const int PlatformTabListView = 2131165219;
 			
-			// aapt resource value: 0x7f060026
-			public const int ProfileAccountIdentifierEditText = 2131099686;
+			// aapt resource value: 0x7f070017
+			public const int PlatformTitleText = 2131165207;
 			
-			// aapt resource value: 0x7f060027
-			public const int ProfileChangeIdentifierButton = 2131099687;
+			// aapt resource value: 0x7f070024
+			public const int ProfileAccountIdentifierEditText = 2131165220;
 			
-			// aapt resource value: 0x7f060028
-			public const int SplashScreenLayout = 2131099688;
+			// aapt resource value: 0x7f070025
+			public const int ProfileChangeIdentifierButton = 2131165221;
 			
-			// aapt resource value: 0x7f060024
-			public const int StatusBarLinearLayout = 2131099684;
+			// aapt resource value: 0x7f07002a
+			public const int RateAppMenuItem = 2131165226;
 			
-			// aapt resource value: 0x7f060011
-			public const int frameLayout = 2131099665;
+			// aapt resource value: 0x7f07002b
+			public const int SettingsMenuItem = 2131165227;
 			
-			// aapt resource value: 0x7f060012
-			public const int linearLayout1 = 2131099666;
+			// aapt resource value: 0x7f070026
+			public const int SplashScreenLayout = 2131165222;
 			
-			// aapt resource value: 0x7f060005
-			public const int linearLayout3 = 2131099653;
+			// aapt resource value: 0x7f070029
+			public const int UnFavoriteMenuItem = 2131165225;
+			
+			// aapt resource value: 0x7f070011
+			public const int frameLayout = 2131165201;
+			
+			// aapt resource value: 0x7f070012
+			public const int linearLayout1 = 2131165202;
+			
+			// aapt resource value: 0x7f070005
+			public const int linearLayout3 = 2131165189;
 			
 			static Id()
 			{
@@ -256,17 +264,39 @@ namespace TheGameDB
 			}
 		}
 		
+		public partial class Menu
+		{
+			
+			// aapt resource value: 0x7f060000
+			public const int ActionBarMenu = 2131099648;
+			
+			static Menu()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Menu()
+			{
+			}
+		}
+		
 		public partial class String
 		{
 			
+			// aapt resource value: 0x7f050000
+			public const int favoriteText = 2131034112;
+			
+			// aapt resource value: 0x7f050004
+			public const int helpText = 2131034116;
+			
 			// aapt resource value: 0x7f050002
-			public const int app_name = 2131034114;
+			public const int rateAppText = 2131034114;
+			
+			// aapt resource value: 0x7f050003
+			public const int settingsText = 2131034115;
 			
 			// aapt resource value: 0x7f050001
-			public const int facebookLogin = 2131034113;
-			
-			// aapt resource value: 0x7f050000
-			public const int library_name = 2131034112;
+			public const int unFavoriteText = 2131034113;
 			
 			static String()
 			{

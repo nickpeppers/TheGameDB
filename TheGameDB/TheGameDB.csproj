@@ -56,9 +56,6 @@
     <Reference Include="Xamarin.Auth.Android">
       <HintPath>Components\azure-mobile-services-1.1.0\lib\android\Xamarin.Auth.Android.dll</HintPath>
     </Reference>
-    <Reference Include="Facebook">
-      <HintPath>..\Components\facebook-sdk-6.2.1\lib\android\Facebook.dll</HintPath>
-    </Reference>
     <Reference Include="System.Net.Http" />
   </ItemGroup>
   <ItemGroup>
@@ -103,18 +100,9 @@
     <AndroidResource Include="Resources\anim\splash_fade_out.xml" />
     <AndroidResource Include="Resources\layout\GameSearchTabLayout.axml" />
     <AndroidResource Include="Resources\layout\PlatformTabLayout.axml" />
+    <AndroidResource Include="Resources\menu\ActionBarMenu.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
-  <ItemGroup>
-    <XamarinComponentReference Include="azure-mobile-services">
-      <Version>1.1.0</Version>
-      <Visible>False</Visible>
-    </XamarinComponentReference>
-    <XamarinComponentReference Include="facebook-sdk">
-      <Version>6.2.1</Version>
-      <Visible>False</Visible>
-    </XamarinComponentReference>
-  </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\layout\" />
     <Folder Include="Resources\values\" />
@@ -124,5 +112,6 @@
     <Folder Include="Adapters\" />
     <Folder Include="Resources\anim\" />
     <Folder Include="Fragments\" />
+    <Folder Include="Resources\menu\" />
   </ItemGroup>
 </Project>

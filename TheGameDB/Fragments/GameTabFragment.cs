@@ -22,7 +22,7 @@ namespace TheGameDB
             var view = inflater.Inflate (Resource.Layout.GameSearchTabLayout, container, false);
 
             var searchEditText = view.FindViewById<EditText> (Resource.Id.GameTabSearchEditText);
-            var _searchButton = view.FindViewById<Button>(Resource.Id.GameTabSearchButton);
+            _searchButton = view.FindViewById<Button>(Resource.Id.GameTabSearchButton);
             _listView = view.FindViewById <ListView>(Resource.Id.GameTabSearchListView);
 
             _searchButton.Click += (sender, e) => 

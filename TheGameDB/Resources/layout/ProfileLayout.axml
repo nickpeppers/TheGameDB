@@ -3,23 +3,6 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
-    <LinearLayout
-        android:orientation="horizontal"
-        android:minWidth="25px"
-        android:minHeight="25px"
-        android:layout_width="fill_parent"
-        android:layout_height="44dp"
-        android:id="@+id/StatusBarLinearLayout"
-        android:layout_marginBottom="3dp"
-        android:background="#ff4c4c4c">
-        <Button
-            android:text="Profile"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:id="@+id/MainProfileSearchBarButton"
-            android:layout_weight="1"
-            android:background="#aa000000" />
-    </LinearLayout>
     <EditText
         android:id="@+id/ProfileAccountIdentifierEditText"
         android:hint="Account Identifier"
@@ -27,7 +10,10 @@
         android:singleLine="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="3dp" />
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="3dp" />
     <Button
         android:text="Change Account Identifier"
         android:id="@+id/ProfileChangeIdentifierButton"
