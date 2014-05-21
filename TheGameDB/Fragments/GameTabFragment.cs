@@ -34,9 +34,12 @@ namespace TheGameDB
                 
             _listView.ItemClick += (sender, e) => 
             {
-                var gameIntent = new Intent(Activity, typeof(GameActivity));
-                gameIntent.PutExtra("GameId", _gamesList[e.Position].GameId);
-                StartActivity(gameIntent);
+                if(!string.IsNullOrEmpty(_gamesList[e.Position].GameId))
+                {
+                    var gameIntent = new Intent(Activity, typeof(GameActivity));
+                    gameIntent.PutExtra("GameId", _gamesList[e.Position].GameId);
+                    StartActivity(gameIntent);
+                }
             };
 
             searchEditText.KeyPress += (object sender, View.KeyEventArgs e) => 

@@ -15,7 +15,7 @@ using Android.Graphics;
 
 namespace TheGameDB
 {
-    [Activity (Label = "Platform", LaunchMode = LaunchMode.SingleInstance)]			
+    [Activity (Label = "Platform")]			
     public class PlatformActivity : BaseActivity<SettingsViewModel>
 	{
         protected override async void OnCreate (Bundle bundle)

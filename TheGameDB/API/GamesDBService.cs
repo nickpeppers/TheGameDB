@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Xml;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace TheGameDB
 {
@@ -9,6 +10,7 @@ namespace TheGameDB
         public Game GetGame(string GameId)
         {
             XmlDocument doc = new XmlDocument ();
+            //TODO: Need to add try catch
             doc.Load("http://thegamesdb.net/api/GetGame.php?id=" + GameId);
 
             XmlNodeList nodes = doc.DocumentElement.SelectNodes("/Data/Game");
@@ -162,32 +164,44 @@ namespace TheGameDB
         public List<GamesList> GetGameList(string SearchText)
         {
             XmlDocument doc = new XmlDocument ();
-            doc.Load("http://thegamesdb.net/api/GetGamesList.php?name=" + SearchText);//test location
-
-            XmlNodeList nodes = doc.DocumentElement.SelectNodes("/Data/Game");
-
             List<GamesList> games = new List<GamesList>();
 
-            foreach (XmlNode node in nodes)
+            try
             {
-                GamesList game = new GamesList();
+                doc.Load("http://thegamesdb.net/api/GetGamesList.php?name=" + SearchText);
 
-                game.GameId = node.SelectSingleNode("id").InnerText;
-                game.GameTitle = node.SelectSingleNode("GameTitle").InnerText;
-                if (node.SelectSingleNode ("ReleaseDate") != null) 
+                XmlNodeList nodes = doc.DocumentElement.SelectNodes("/Data/Game");
+
+                foreach (XmlNode node in nodes)
                 {
-                    game.ReleaseDate = node.SelectSingleNode ("ReleaseDate").InnerText;
-                }
-                game.Platform=node.SelectSingleNode("Platform").InnerText;
+                    GamesList game = new GamesList();
 
-                games.Add(game);
+                    game.GameId = node.SelectSingleNode("id").InnerText;
+                    game.GameTitle = node.SelectSingleNode("GameTitle").InnerText;
+                    if (node.SelectSingleNode ("ReleaseDate") != null) 
+                    {
+                        game.ReleaseDate = node.SelectSingleNode ("ReleaseDate").InnerText;
+                    }
+                    game.Platform=node.SelectSingleNode("Platform").InnerText;
+
+                    games.Add(game);
+                }
+                return games;
             }
-            return games;
+            catch
+            {
+                var game = new GamesList();
+                game.GameTitle = "Sorry No Results for " + SearchText + ". Please try again later.";
+                games.Add(game);
+                return games;
+            }
         }
             
         public Platform GetPlatform(string PlatformId)
         {
             XmlDocument doc = new XmlDocument ();
+
+            //TODO: Need to add try catch
             doc.Load("http://thegamesdb.net/api/GetPlatform.php?id=" + PlatformId);
 
             XmlNodeList nodes = doc.DocumentElement.SelectNodes("/Data/Platform");
@@ -330,25 +344,35 @@ namespace TheGameDB
         public List<PlatformsList> GetPlatformsList()
         {
             XmlDocument doc = new XmlDocument ();
-            doc.Load("http://thegamesdb.net/api/GetPlatformsList.php");//test location
-
-            XmlNodeList nodes = doc.DocumentElement.SelectNodes("/Data/Platforms/Platform");
-
             List<PlatformsList> platforms = new List<PlatformsList>();
 
-            foreach (XmlNode node in nodes)
+            try
             {
-                PlatformsList platform = new PlatformsList();
+                doc.Load("http://thegamesdb.net/api/GetPlatformsList.php");//test location
 
-                platform.PlatformId = node.SelectSingleNode("id").InnerText;
-                platform.PlatformName = node.SelectSingleNode("name").InnerText;
-                if (node.SelectSingleNode ("alias") != null) 
+                XmlNodeList nodes = doc.DocumentElement.SelectNodes("/Data/Platforms/Platform");
+
+                foreach (XmlNode node in nodes)
                 {
-                    platform.PlatformAlias = node.SelectSingleNode ("alias").InnerText;
+                    PlatformsList platform = new PlatformsList();
+
+                    platform.PlatformId = node.SelectSingleNode("id").InnerText;
+                    platform.PlatformName = node.SelectSingleNode("name").InnerText;
+                    if (node.SelectSingleNode ("alias") != null) 
+                    {
+                        platform.PlatformAlias = node.SelectSingleNode ("alias").InnerText;
+                    }
+                    platforms.Add(platform);
                 }
-                platforms.Add(platform);
+                return platforms;
             }
-            return platforms;
+            catch
+            {
+                var platform = new PlatformsList();
+                platform.PlatformName = "Sorry there was a problem loading Platforms. Please try again later.";
+                platforms.Add(platform);
+                return platforms;
+            }
         }
     }
 }

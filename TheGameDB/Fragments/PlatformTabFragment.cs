@@ -27,9 +27,12 @@ namespace TheGameDB
 
             listView.ItemClick += (sender, e) => 
             {
-                var platformIntent = new Intent(Activity, typeof(PlatformActivity));
-                platformIntent.PutExtra("PlatformId", _platformList[e.Position].PlatformId);
-                StartActivity(platformIntent);
+                if(!string.IsNullOrEmpty(_platformList[e.Position].PlatformId))
+                {
+                    var platformIntent = new Intent(Activity, typeof(PlatformActivity));
+                    platformIntent.PutExtra("PlatformId", _platformList[e.Position].PlatformId);
+                    StartActivity(platformIntent);
+                }
             };
 
             return view;
