@@ -83,7 +83,7 @@ namespace TheGameDB
                     }
                 case "Settings":
                     {
-                        StartActivity(typeof(ProfileActivity));
+                        StartActivity(typeof(SettingsActivity));
                         return true;
                     }
                 case "Help":

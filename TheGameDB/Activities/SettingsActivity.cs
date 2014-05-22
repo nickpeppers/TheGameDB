@@ -14,8 +14,8 @@ using Android.Content.PM;
 
 namespace TheGameDB
 {
-    [Activity (Label = "Settings", LaunchMode = LaunchMode.SingleInstance)]			
-    public class ProfileActivity : BaseActivity<SettingsViewModel>
+    [Activity (Label = "Settings")]			
+    public class SettingsActivity : BaseActivity<SettingsViewModel>
 	{
 		protected override void OnCreate (Bundle bundle)
 		{
