@@ -26,7 +26,7 @@ namespace TheGameDB
 
             var platformId = Intent.GetStringExtra("PlatformId");
 
-            var platform = new GamesDBService().GetPlatform(platformId);
+            var platform = new GamesDBService().GetPlatform(this, platformId);
 
             var image = FindViewById<ImageView>(Resource.Id.PlatformImage);
             var title = FindViewById<TextView>(Resource.Id.PlatformTitleText);

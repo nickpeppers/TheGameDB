@@ -26,7 +26,7 @@ namespace TheGameDB
 
             var gameId = Intent.GetStringExtra("GameId");
 
-            var game = new GamesDBService().GetGame(gameId);
+            var game = new GamesDBService().GetGame(this, gameId);
 
 			var image = FindViewById<ImageView> (Resource.Id.GameImage);
             var gameTitle = FindViewById<TextView>(Resource.Id.GameTitleText);
