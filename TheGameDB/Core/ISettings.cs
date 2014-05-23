@@ -24,11 +24,11 @@ namespace TheGameDB
 			_context = context;
 		}
 
-		public bool IsLoggedIn
-		{
-			get { return GetBool("IsLoggedIn"); }
-			set { Put("IsLoggedIn", value); }
-		}
+        public string AccountIdentifier
+        {
+            get { return GetString("AccountIdentifier"); }
+            set { Put("AccountIdentifier", value); }
+        }
 
 		public void Save()
 		{

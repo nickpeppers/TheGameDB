@@ -23,6 +23,7 @@ namespace TheGameDB
             base.OnCreate(bundle);
 
             SetContentView(Resource.Layout.MainLayout);
+            viewModel.LoadSettings();
 
             ActionBar.NavigationMode = ActionBarNavigationMode.Tabs;
             var gameTab = ActionBar.NewTab();
