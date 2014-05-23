@@ -94,13 +94,13 @@
     <AndroidResource Include="Resources\layout\MainSearchRowLayout.axml" />
     <AndroidResource Include="Resources\layout\GameLayout.axml" />
     <AndroidResource Include="Resources\layout\PlatformLayout.axml" />
-    <AndroidResource Include="Resources\layout\ProfileLayout.axml" />
     <AndroidResource Include="Resources\layout\SplashScreenLayout.axml" />
     <AndroidResource Include="Resources\anim\splash_fade_in.xml" />
     <AndroidResource Include="Resources\anim\splash_fade_out.xml" />
     <AndroidResource Include="Resources\layout\GameSearchTabLayout.axml" />
     <AndroidResource Include="Resources\layout\PlatformTabLayout.axml" />
     <AndroidResource Include="Resources\menu\ActionBarMenu.xml" />
+    <AndroidResource Include="Resources\layout\SettingsLayout.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

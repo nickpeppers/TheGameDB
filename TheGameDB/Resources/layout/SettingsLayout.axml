@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <TextView
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/SettingAccIdInfoTextView"
+        android:linksClickable="true"
+        android:autoLink="web"
+        android:padding="3dp"
+        android:text="@string/settingsAccIdText" />
+    <TextView
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="3dp"
+        android:id="@+id/SettingsCurrentAccountIdTextView"
+        android:layout_marginTop="3dp" />
+    <EditText
+        android:id="@+id/SettingsAccountIdentifierEditText"
+        android:hint="Account Identifier"
+        android:padding="3dp"
+        android:singleLine="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="3dp" />
+    <Button
+        android:text="Add Account Identifier"
+        android:id="@+id/SettingsChangeIdentifierButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp" />
+</LinearLayout>

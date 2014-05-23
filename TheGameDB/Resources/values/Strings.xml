@@ -5,4 +5,5 @@
 	<string name="rateAppText">Rate App</string>	
 	<string name="settingsText">Settings</string>
 	<string name="helpText">Help</string>
+	<string name="settingsAccIdText">To Rate and Favorite Games please add your TheGamesDB Account Identifier found on your user profile. If you don\'t have an account you can visit http://thegamesdb.net to sign up.</string>
 </resources>

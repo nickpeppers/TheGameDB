@@ -21,11 +21,17 @@ namespace TheGameDB
 		{
 			base.OnCreate (bundle);
 
-			SetContentView (Resource.Layout.ProfileLayout);
+            SetContentView (Resource.Layout.SettingsLayout);
 
-			var accountIdentifier = FindViewById<EditText> (Resource.Id.ProfileAccountIdentifierEditText);
+            var currentAccountIdentifier = FindViewById<TextView>(Resource.Id.SettingsCurrentAccountIdTextView);
+            if (!string.IsNullOrEmpty(viewModel.AccountIdentifier))
+            {
+                currentAccountIdentifier.Text = "Current Identifier: " + viewModel.AccountIdentifier;
+            }
 
-			var changeIdentifierButton = FindViewById<Button> (Resource.Id.ProfileChangeIdentifierButton);
+            var accountIdentifier = FindViewById<EditText> (Resource.Id.SettingsAccountIdentifierEditText);
+
+            var changeIdentifierButton = FindViewById<Button> (Resource.Id.SettingsChangeIdentifierButton);
 			changeIdentifierButton.Click += (sender, e) => 
 			{
 				if(string.IsNullOrEmpty(accountIdentifier.Text))
@@ -40,11 +46,11 @@ namespace TheGameDB
 				{
 					try
 					{
-
+                        viewModel.AddAccountIdentifier(accountIdentifier.Text);
 					}
 					finally
 					{
-						Finish();
+                        currentAccountIdentifier.Text = "Current Identifier: " + viewModel.AccountIdentifier;
 					}
 				}
 			};

@@ -82,8 +82,8 @@ namespace TheGameDB
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f070028
-			public const int FavoriteMenuItem = 2131165224;
+			// aapt resource value: 0x7f07002a
+			public const int FavoriteMenuItem = 2131165226;
 			
 			// aapt resource value: 0x7f070007
 			public const int GameCoopText = 2131165191;
@@ -133,11 +133,11 @@ namespace TheGameDB
 			// aapt resource value: 0x7f070001
 			public const int GameTitleText = 2131165185;
 			
-			// aapt resource value: 0x7f070027
-			public const int GamesDBLoginImageView = 2131165223;
+			// aapt resource value: 0x7f070029
+			public const int GamesDBLoginImageView = 2131165225;
 			
-			// aapt resource value: 0x7f07002c
-			public const int HelpMenuItem = 2131165228;
+			// aapt resource value: 0x7f07002e
+			public const int HelpMenuItem = 2131165230;
 			
 			// aapt resource value: 0x7f070015
 			public const int MainSearchRowPlatformTextView = 2131165205;
@@ -190,23 +190,29 @@ namespace TheGameDB
 			// aapt resource value: 0x7f070017
 			public const int PlatformTitleText = 2131165207;
 			
+			// aapt resource value: 0x7f07002c
+			public const int RateAppMenuItem = 2131165228;
+			
 			// aapt resource value: 0x7f070024
-			public const int ProfileAccountIdentifierEditText = 2131165220;
-			
-			// aapt resource value: 0x7f070025
-			public const int ProfileChangeIdentifierButton = 2131165221;
-			
-			// aapt resource value: 0x7f07002a
-			public const int RateAppMenuItem = 2131165226;
-			
-			// aapt resource value: 0x7f07002b
-			public const int SettingsMenuItem = 2131165227;
+			public const int SettingAccIdInfoTextView = 2131165220;
 			
 			// aapt resource value: 0x7f070026
-			public const int SplashScreenLayout = 2131165222;
+			public const int SettingsAccountIdentifierEditText = 2131165222;
 			
-			// aapt resource value: 0x7f070029
-			public const int UnFavoriteMenuItem = 2131165225;
+			// aapt resource value: 0x7f070027
+			public const int SettingsChangeIdentifierButton = 2131165223;
+			
+			// aapt resource value: 0x7f070025
+			public const int SettingsCurrentAccountIdTextView = 2131165221;
+			
+			// aapt resource value: 0x7f07002d
+			public const int SettingsMenuItem = 2131165229;
+			
+			// aapt resource value: 0x7f070028
+			public const int SplashScreenLayout = 2131165224;
+			
+			// aapt resource value: 0x7f07002b
+			public const int UnFavoriteMenuItem = 2131165227;
 			
 			// aapt resource value: 0x7f070011
 			public const int frameLayout = 2131165201;
@@ -249,7 +255,7 @@ namespace TheGameDB
 			public const int PlatformTabLayout = 2130903045;
 			
 			// aapt resource value: 0x7f030006
-			public const int ProfileLayout = 2130903046;
+			public const int SettingsLayout = 2130903046;
 			
 			// aapt resource value: 0x7f030007
 			public const int SplashScreenLayout = 2130903047;
@@ -291,6 +297,9 @@ namespace TheGameDB
 			
 			// aapt resource value: 0x7f050002
 			public const int rateAppText = 2131034114;
+			
+			// aapt resource value: 0x7f050005
+			public const int settingsAccIdText = 2131034117;
 			
 			// aapt resource value: 0x7f050003
 			public const int settingsText = 2131034115;
